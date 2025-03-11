@@ -1,0 +1,36 @@
+{
+  "da": [
+    "loginToHare",
+    "loginWithEmail",
+    "signupWithEmail",
+    "startedWithHare",
+    "choosesettingaccount"
+  ],
+
+  "es": [
+    "loginToHare",
+    "loginWithEmail",
+    "signupWithEmail",
+    "enterEmailOrNumber",
+    "startedWithHare",
+    "choosesettingaccount"
+  ],
+
+  "no": [
+    "loginToHare",
+    "loginWithEmail",
+    "signupWithEmail",
+    "enterEmailOrNumber",
+    "startedWithHare",
+    "choosesettingaccount"
+  ],
+
+  "sv": [
+    "loginToHare",
+    "loginWithEmail",
+    "signupWithEmail",
+    "enterEmailOrNumber",
+    "startedWithHare",
+    "choosesettingaccount"
+  ]
+}
