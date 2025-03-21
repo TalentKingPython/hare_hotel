@@ -128,10 +128,10 @@ class ApiBaseHelper {
 class ApiVippsHelper {
   final Dio _dio = Dio();
 
-  String clientId = ApiConst.clientId;
-  String clientSecret = ApiConst.clientSecret;
-  String subscriptionKey = ApiConst.subscriptionKey;
-  String msn = ApiConst.msn;
+  // String clientId = ApiConst.clientId;
+  // String clientSecret = ApiConst.clientSecret;
+  // String subscriptionKey = ApiConst.subscriptionKey;
+  // String msn = ApiConst.msn;
 
   String systemName = 'Hare Norway AS';
   String systemVersion = '3.1.2';
@@ -146,10 +146,10 @@ class ApiVippsHelper {
       InterceptorsWrapper(
         onRequest: (options, handler) {
           Map<String, String> requestHeaders = {
-            'client_id': clientId,
-            'client_secret': clientSecret,
-            'Ocp-Apim-Subscription-Key': subscriptionKey,
-            'Merchant-Serial-Number': msn,
+            // 'client_id': clientId,
+            // 'client_secret': clientSecret,
+            // 'Ocp-Apim-Subscription-Key': subscriptionKey,
+            // 'Merchant-Serial-Number': msn,
             'Vipps-System-Name': systemName,
             'Vipps-System-Version': systemVersion,
             'Vipps-System-Plugin-Name': pluginName,

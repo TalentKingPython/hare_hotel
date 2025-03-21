@@ -6,12 +6,15 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:redux/redux.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:device_preview/device_preview.dart';
 
 import 'l10n/app_localizations.dart';
 import 'utils/get_location_utils.dart';
+
 import 'redux/store.dart';
 import 'utils/utils.dart';
-import 'screens/common/splash/splash.dart';
+// import 'screens/common/splash/splash.dart';
+import 'screens/common/desktop/desktop.dart';
 
 GetLocationUtils getLocationUtils = GetLocationUtils();
 final GlobalKey<ScaffoldMessengerState> rootScaffoldMessengerKey =
@@ -33,7 +36,7 @@ Future<void> main() async {
   await initStore();
   store = getStore();
 
-  runApp(MyApp(store));
+  runApp(DevicePreview(enabled: true, builder: (context) => MyApp(store)));
 }
 
 class MyApp extends StatefulWidget {
@@ -132,7 +135,7 @@ class MyAppState extends State<MyApp> {
           },
           debugShowCheckedModeBanner: false,
           locale: selectedLocale,
-          home: const Splash(),
+          home: Desktop(),
           onGenerateRoute: (settings) {
             return null;
           },

@@ -32,15 +32,29 @@ class LoginBloc extends Bloc {
   Function(CountryCode) get changeCountryCode =>
       _countryCodeController.sink.add;
 
-  loginApiCall(String loginType, String emailAddress, String password,
-      String name, String loginId, String profileImg) async {
+  loginApiCall(
+    String loginType,
+    String emailAddress,
+    String password,
+    String name,
+    String loginId,
+    String profileImg,
+  ) async {
     List<ConnectivityResult> connectivityResults =
         await (Connectivity().checkConnectivity());
     if (connectivityResults.any((item) => item != ConnectivityResult.none)) {
       _subject.sink.add(ApiResponse.loading());
       try {
-        var response = LoginPojo.fromJson(await _loginRepo.login(
-            loginType, emailAddress, password, name, loginId, profileImg));
+        var response = LoginPojo.fromJson(
+          await _loginRepo.login(
+            loginType,
+            emailAddress,
+            password,
+            name,
+            loginId,
+            profileImg,
+          ),
+        );
         _subject.sink.add(ApiResponse.completed(response));
 
         if (!state.mounted) return;
@@ -64,20 +78,26 @@ class LoginBloc extends Bloc {
   manageEmailLogin(String loginType) {
     FocusManager.instance.primaryFocus!.unfocus();
     if (formKey.currentState!.validate()) {
-      loginApiCall(loginTypeEmail, emailController.text.trim(),
-          passController.text.trim(), "", "", "");
+      loginApiCall(
+        loginTypeEmail,
+        emailController.text.trim(),
+        passController.text.trim(),
+        "",
+        "",
+        "",
+      );
     }
   }
 
   buttonHide() {
-    String email = validateEmailOrNumber(emailController.text);
-    String pass = passwordValidate(passController.text) ?? "";
+    // String email = validateEmailOrNumber(emailController.text);
+    // String pass = passwordValidate(passController.text) ?? "";
 
-    if (pass.isEmpty && email.isEmpty) {
-      submitValid.add(true);
-    } else {
-      submitValid.add(false);
-    }
+    // if (pass.isEmpty && email.isEmpty) {
+    //   submitValid.add(true);
+    // } else {
+    //   submitValid.add(false);
+    // }
   }
 
   @override

@@ -138,7 +138,12 @@ class LoginState extends State<Login> {
                                       controller: _bloc.emailController,
                                       validator: (value) {
                                         _bloc.buttonHide();
-                                        return validateEmailOrNumber(value);
+                                        // return validateEmailOrNumber(value);
+                                        if (value.trim().isEmpty) {
+                                          return languages.enterPass;
+                                        } else {
+                                          return "";
+                                        }
                                       },
                                     ),
                                     SizedBox(height: deviceHeight * 0.025),
@@ -211,7 +216,12 @@ class LoginState extends State<Login> {
                                                 builder: (
                                                   BuildContext context,
                                                 ) {
-                                                  return const ForgotPasswordDialog();
+                                                  // return const ForgotPasswordDialog();
+                                                  return Divider(
+                                                    color: colorMainLightGray,
+                                                    thickness:
+                                                        deviceHeight * 0.0018,
+                                                  );
                                                 },
                                               ),
                                           child: Text(
@@ -286,21 +296,21 @@ class LoginState extends State<Login> {
                               ),
                             ),
                           ),
-                        SocialLogin(
-                          function: ({
-                            String? email,
-                            String? name,
-                            String? id,
-                            String? loginType,
-                          }) {
-                            _bloc.login(
-                              loginType!,
-                              email ?? "",
-                              name ?? "",
-                              id ?? "",
-                            );
-                          },
-                        ),
+                        // SocialLogin(
+                        //   function: ({
+                        //     String? email,
+                        //     String? name,
+                        //     String? id,
+                        //     String? loginType,
+                        //   }) {
+                        //     _bloc.login(
+                        //       loginType!,
+                        //       email ?? "",
+                        //       name ?? "",
+                        //       id ?? "",
+                        //     );
+                        //   },
+                        // ),
                         Container(
                           margin: EdgeInsets.symmetric(
                             vertical: deviceHeight * 0.02,
@@ -323,7 +333,11 @@ class LoginState extends State<Login> {
                                           Navigator.pop(context);
                                           openBottomModalSheet(
                                             context,
-                                            const SignUp(),
+                                            // const SignUp(),
+                                            const Divider(
+                                              color: colorMainLightGray,
+                                              thickness: 2,
+                                            ),
                                           );
                                         },
                                 ),
@@ -375,7 +389,11 @@ class LoginState extends State<Login> {
                                     onPressed:
                                         () => openScreenWithResult(
                                           context,
-                                          const HomeMainV1(),
+                                          // const HomeMainV1(),
+                                          Divider(
+                                            color: colorMainLightGray,
+                                            thickness: deviceHeight * 0.0018,
+                                          ),
                                         ),
                                     style: ElevatedButton.styleFrom(
                                       elevation: 0,
