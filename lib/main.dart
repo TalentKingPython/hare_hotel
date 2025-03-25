@@ -6,7 +6,6 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:redux/redux.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:device_preview/device_preview.dart';
 
 import 'l10n/app_localizations.dart';
 import 'utils/get_location_utils.dart';
@@ -36,7 +35,8 @@ Future<void> main() async {
   await initStore();
   store = getStore();
 
-  runApp(DevicePreview(enabled: true, builder: (context) => MyApp(store)));
+  // runApp(DevicePreview(enabled: true, builder: (context) => MyApp(store)));
+  runApp(MyApp(store));
 }
 
 class MyApp extends StatefulWidget {
@@ -77,6 +77,8 @@ class MyAppState extends State<MyApp> {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
     ]);
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
@@ -105,7 +107,7 @@ class MyAppState extends State<MyApp> {
               cursorColor: colorPrimary,
             ),
             fontFamily: GoogleFonts.nunito().fontFamily,
-            scaffoldBackgroundColor: colorWhite,
+            scaffoldBackgroundColor: colorMainBackground,
             appBarTheme: const AppBarTheme(
               centerTitle: false,
               titleSpacing: 0,
@@ -135,7 +137,7 @@ class MyAppState extends State<MyApp> {
           },
           debugShowCheckedModeBanner: false,
           locale: selectedLocale,
-          home: Desktop(),
+          home: HomeScreen(),
           onGenerateRoute: (settings) {
             return null;
           },
