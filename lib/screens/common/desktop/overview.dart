@@ -853,9 +853,9 @@ class Overview extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        _EssentialCard(),
-                        _EssentialCard(),
-                        _EssentialCard(),
+                        _essentialCard(),
+                        _essentialCard(),
+                        _essentialCard(),
                       ],
                     ),
                   ],
@@ -1604,9 +1604,271 @@ class Overview extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        _greatSectionCard(),
-                        _greatSectionCard(),
-                        _greatSectionCard(),
+                        _greatSectionCard("assets/images/bergen_hotel_1.png"),
+                        _greatSectionCard("assets/images/bergen_hotel_1.png"),
+                        _greatSectionCard("assets/images/bergen_hotel_1.png"),
+                      ],
+                    ),
+                    SizedBox(height: deviceHeight * 0.05),
+                    Text(
+                      "Ports of Call Tours",
+                      style: TextStyle(
+                        color: colorBlack,
+                        fontSize: deviceWidth * 0.018,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: deviceHeight * 0.05),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _greatSectionCard(
+                          "assets/images/bergen_essential_1.png",
+                        ),
+                        _greatSectionCard(
+                          "assets/images/bergen_essential_1.png",
+                        ),
+                        _greatSectionCard(
+                          "assets/images/bergen_essential_1.png",
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: deviceHeight * 0.05),
+                    Text(
+                      "Bars",
+                      style: TextStyle(
+                        color: colorBlack,
+                        fontSize: deviceWidth * 0.018,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: deviceHeight * 0.05),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _greatSectionCard("assets/images/bergen_bar_1.png"),
+                        _greatSectionCard("assets/images/bergen_bar_1.png"),
+                        _greatSectionCard("assets/images/bergen_bar_1.png"),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              //Experiences Section
+              Container(
+                padding: EdgeInsets.symmetric(vertical: deviceHeight * 0.1),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Must-do experiences in Bergen",
+                              style: TextStyle(
+                                color: colorBlack,
+                                fontSize: deviceWidth * 0.028,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: deviceHeight * 0.015),
+                            Text(
+                              "Pick a category to filter your necs",
+                              style: TextStyle(
+                                color: colorHotelText,
+                                fontSize: deviceWidth * 0.014,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          width: deviceWidth * 0.1,
+                          height: deviceHeight * 0.05,
+                          decoration: BoxDecoration(
+                            color: colorWhite,
+                            border: Border.all(
+                              color: colorButtonBorder,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(
+                              deviceWidth * 0.1,
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "View More",
+                              style: TextStyle(
+                                color: colorBlack,
+                                fontWeight: FontWeight.bold,
+                                fontSize: deviceWidth * 0.011,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: deviceHeight * 0.05),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _experienceCard(),
+                        _experienceCard(),
+                        _experienceCard(),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
+              //Day Cruises Section
+              Container(
+                padding: EdgeInsets.symmetric(vertical: deviceHeight * 0.1),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Day Cruises",
+                              style: TextStyle(
+                                color: colorBlack,
+                                fontSize: deviceWidth * 0.028,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: deviceHeight * 0.015),
+                            Text(
+                              "Get ideas on what to do, see, and eat",
+                              style: TextStyle(
+                                color: colorHotelText,
+                                fontSize: deviceWidth * 0.014,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          width: deviceWidth * 0.1,
+                          height: deviceHeight * 0.05,
+                          decoration: BoxDecoration(
+                            color: colorWhite,
+                            border: Border.all(
+                              color: colorButtonBorder,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(
+                              deviceWidth * 0.1,
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "View More",
+                              style: TextStyle(
+                                color: colorBlack,
+                                fontWeight: FontWeight.bold,
+                                fontSize: deviceWidth * 0.011,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: deviceHeight * 0.05),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _greatSectionCard("assets/images/bergen_hotel_1.png"),
+                        _greatSectionCard("assets/images/bergen_hotel_1.png"),
+                        _greatSectionCard("assets/images/bergen_hotel_1.png"),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
+              //Attraction Section
+              Container(
+                padding: EdgeInsets.symmetric(vertical: deviceHeight * 0.1),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Top Attractions in Bergen",
+                              style: TextStyle(
+                                color: colorBlack,
+                                fontSize: deviceWidth * 0.028,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: deviceHeight * 0.015),
+                            Text(
+                              "These Rankings are informed by Hare data - we consider traveler reviews & ratings",
+                              style: TextStyle(
+                                color: colorHotelText,
+                                fontSize: deviceWidth * 0.014,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          width: deviceWidth * 0.1,
+                          height: deviceHeight * 0.05,
+                          decoration: BoxDecoration(
+                            color: colorWhite,
+                            border: Border.all(
+                              color: colorButtonBorder,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(
+                              deviceWidth * 0.1,
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "View More",
+                              style: TextStyle(
+                                color: colorBlack,
+                                fontWeight: FontWeight.bold,
+                                fontSize: deviceWidth * 0.011,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: deviceHeight * 0.05),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        _attractionCard(),
+                        _attractionCard(),
+                        _attractionCard(),
                       ],
                     ),
                   ],
@@ -1619,7 +1881,7 @@ class Overview extends StatelessWidget {
     );
   }
 
-  Widget _EssentialCard() {
+  Widget _essentialCard() {
     return Container(
       width: deviceWidth * 0.28,
       height: deviceHeight * 0.7,
@@ -1637,7 +1899,7 @@ class Overview extends StatelessWidget {
         children: [
           Container(
             height: deviceHeight * 0.4,
-            width: deviceWidth * 0.25,
+            width: deviceWidth * 0.26,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(deviceWidth * 0.02),
             ),
@@ -1776,7 +2038,7 @@ class Overview extends StatelessWidget {
         children: [
           Container(
             height: deviceHeight * 0.5,
-            width: deviceWidth * 0.25,
+            width: deviceWidth * 0.26,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(deviceWidth * 0.02),
             ),
@@ -1811,7 +2073,7 @@ class Overview extends StatelessWidget {
     );
   }
 
-  Widget _greatSectionCard() {
+  Widget _greatSectionCard(String imagepath) {
     return Container(
       width: deviceWidth * 0.28,
       height: deviceHeight * 0.7,
@@ -1829,14 +2091,137 @@ class Overview extends StatelessWidget {
         children: [
           Container(
             height: deviceHeight * 0.4,
-            width: deviceWidth * 0.25,
+            width: deviceWidth * 0.26,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+              child: Image.asset(imagepath, fit: BoxFit.fill),
+            ),
+          ),
+          SizedBox(height: deviceHeight * 0.02),
+          Text(
+            "Lorem ipsum dolor sit amet, consectetur ipsum",
+            style: TextStyle(
+              color: colorBlack,
+              fontSize: deviceWidth * 0.018,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: deviceHeight * 0.01),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.star,
+                color: Color(0xFFF2B022),
+                size: deviceWidth * 0.02,
+              ),
+              Icon(
+                Icons.star,
+                color: Color(0xFFF2B022),
+                size: deviceWidth * 0.02,
+              ),
+              Icon(
+                Icons.star,
+                color: Color(0xFFF2B022),
+                size: deviceWidth * 0.02,
+              ),
+              Icon(
+                Icons.star,
+                color: Color(0xFFF2B022),
+                size: deviceWidth * 0.02,
+              ),
+              Icon(
+                Icons.star,
+                color: Color(0xFFF2B022),
+                size: deviceWidth * 0.02,
+                fill: 0.1,
+              ),
+              SizedBox(width: deviceWidth * 0.015),
+              Text(
+                "4.8",
+                style: TextStyle(
+                  color: colorBlack,
+                  fontSize: deviceWidth * 0.016,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(width: deviceWidth * 0.01),
+              Text(
+                "(278 Reviews)",
+                style: TextStyle(
+                  color: colorHotelText,
+                  fontSize: deviceWidth * 0.016,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: deviceHeight * 0.02),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "From",
+                style: TextStyle(
+                  color: colorBlack,
+                  fontSize: deviceWidth * 0.018,
+                ),
+              ),
+              SizedBox(width: deviceWidth * 0.01),
+              Text(
+                "\$94USD ",
+                style: TextStyle(
+                  color: colorRed,
+                  fontSize: deviceWidth * 0.018,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "/adult",
+                style: TextStyle(
+                  color: colorHotelText,
+                  fontSize: deviceWidth * 0.018,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _experienceCard() {
+    return Container(
+      width: deviceWidth * 0.28,
+      height: deviceHeight * 0.8,
+      padding: EdgeInsets.symmetric(
+        horizontal: deviceWidth * 0.01,
+        vertical: deviceHeight * 0.02,
+      ),
+      decoration: BoxDecoration(
+        color: colorWhite,
+        borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: deviceHeight * 0.4,
+            width: deviceWidth * 0.26,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(deviceWidth * 0.02),
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(deviceWidth * 0.02),
               child: Image.asset(
-                "assets/images/bergen_hotel_1.png",
+                "assets/images/bergen_essential_1.png",
                 fit: BoxFit.fill,
               ),
             ),
@@ -1931,6 +2316,207 @@ class Overview extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: deviceHeight * 0.02),
+          Container(
+            width: deviceWidth * 0.25,
+            height: deviceHeight * 0.06,
+            decoration: BoxDecoration(
+              color: colorRed,
+              borderRadius: BorderRadius.circular(deviceWidth * 0.1),
+            ),
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    "assets/images/experience-reserve.svg",
+                    width: deviceWidth * 0.016,
+                    height: deviceWidth * 0.016,
+                  ),
+                  SizedBox(width: deviceWidth * 0.01),
+                  Text(
+                    "Reserve",
+                    style: TextStyle(
+                      color: colorWhite,
+                      fontSize: deviceWidth * 0.014,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _attractionCard() {
+    return Container(
+      width: deviceWidth * 0.28,
+      height: deviceHeight * 0.8,
+      decoration: BoxDecoration(
+        color: colorRed.withAlpha(10),
+        borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: deviceWidth * 0.28,
+            height: deviceHeight * 0.06,
+            child: Center(
+              child: Text(
+                "See ways to experience (29)",
+                style: TextStyle(
+                  color: colorRed,
+                  fontSize: deviceWidth * 0.014,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
+          Container(
+            width: deviceWidth * 0.28,
+            height: deviceHeight * 0.74,
+            padding: EdgeInsets.symmetric(
+              horizontal: deviceWidth * 0.01,
+              vertical: deviceHeight * 0.02,
+            ),
+            decoration: BoxDecoration(
+              color: colorWhite,
+              borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  height: deviceHeight * 0.4,
+                  width: deviceWidth * 0.26,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+                    child: Image.asset(
+                      "assets/images/bergen_essential_1.png",
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                SizedBox(height: deviceHeight * 0.02),
+                Text(
+                  "Lorem ipsum dolor sit amet, consectetur ipsum",
+                  style: TextStyle(
+                    color: colorBlack,
+                    fontSize: deviceWidth * 0.018,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: deviceHeight * 0.01),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.star,
+                      color: Color(0xFFF2B022),
+                      size: deviceWidth * 0.02,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Color(0xFFF2B022),
+                      size: deviceWidth * 0.02,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Color(0xFFF2B022),
+                      size: deviceWidth * 0.02,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Color(0xFFF2B022),
+                      size: deviceWidth * 0.02,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Color(0xFFF2B022),
+                      size: deviceWidth * 0.02,
+                      fill: 0.1,
+                    ),
+                    SizedBox(width: deviceWidth * 0.015),
+                    Text(
+                      "4.8",
+                      style: TextStyle(
+                        color: colorBlack,
+                        fontSize: deviceWidth * 0.016,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: deviceWidth * 0.01),
+                    Text(
+                      "(278 Reviews)",
+                      style: TextStyle(
+                        color: colorHotelText,
+                        fontSize: deviceWidth * 0.016,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: deviceHeight * 0.02),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: deviceHeight * 0.05,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: deviceWidth * 0.01,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: colorButtonBorder, width: 1),
+                        borderRadius: BorderRadius.circular(deviceWidth * 0.1),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Mountain",
+                          style: TextStyle(
+                            color: colorHotelText,
+                            fontSize: deviceWidth * 0.012,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: deviceWidth * 0.01),
+                    Container(
+                      height: deviceHeight * 0.05,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: deviceWidth * 0.01,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: colorButtonBorder, width: 1),
+                        borderRadius: BorderRadius.circular(deviceWidth * 0.1),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Walking Areas",
+                          style: TextStyle(
+                            color: colorHotelText,
+                            fontSize: deviceWidth * 0.012,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
