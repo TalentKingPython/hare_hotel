@@ -614,25 +614,25 @@ class Thingstodo extends StatelessWidget {
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         children: [
 
-                                          InkWell(
-                                            child: Image.asset(
-                                              "assets/images/users.png",
-                                              width: deviceHeight * 0.05,
-                                              height: deviceHeight * 0.05,
-                                            ),
-                                            onTap: () => _selectUser(context),
-                                          ),
+                                          // InkWell(
+                                          //   child: Image.asset(
+                                          //     "assets/images/users.png",
+                                          //     width: deviceHeight * 0.05,
+                                          //     height: deviceHeight * 0.05,
+                                          //   ),
+                                            // onTap: () => _selectUser(context),
+                                          // ),
 
-                                          SizedBox(width: 6),
-                                          Container(
-                                            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                            child: Text(
-                                              _selectedUser == null
-                                                  ? 'Select user'
-                                                  : _dateFormat.format(_selectedUser!),
-                                              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-                                            ),
-                                          ),
+                                          // SizedBox(width: 6),
+                                          // Container(
+                                          //   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                          //   child: Text(
+                                          //     _selectedUser == null
+                                          //         ? 'Select user'
+                                          //         : _dateFormat.format(_selectedUser!),
+                                          //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                                          //   ),
+                                          // ),
                                         ],
                                       ),
                                     ),
