@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../utils/utils.dart';
 import '../desktop/overview.dart';
+import '../desktop/thingstodo/date.dart';
+import '../desktop/thingstodo.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -190,17 +192,13 @@ class _HomeScreenState extends State<HomeScreen>
         controller: _tabController,
         children: [
           Center(child: Overview()),
+          Center(child: Thingstodo()),
           Center(
-            child: Text(
-              'Things To Do1',
-              style: TextStyle(fontSize: 14, color: colorTextCommonDark),
-            ),
-          ),
-          Center(
-            child: Text(
-              'Restaurant1',
-              style: TextStyle(fontSize: 14, color: colorTextCommonDark),
-            ),
+            // child: Text(
+            //   'Restaurant1',
+            //   style: TextStyle(fontSize: 14, color: colorTextCommonDark),
+            // ),
+            child: CompactDatePickerDemo(),
           ),
           Center(
             child: Text(
