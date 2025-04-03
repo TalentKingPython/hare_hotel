@@ -8,12 +8,11 @@ import 'package:redux/redux.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'l10n/app_localizations.dart';
-import 'utils/get_location_utils.dart';
 
 import 'redux/store.dart';
 import 'utils/utils.dart';
 // import 'screens/common/splash/splash.dart';
-import 'screens/common/desktop/desktop.dart';
+import 'screens/common/homeScreen/home_screen.dart';
 
 GetLocationUtils getLocationUtils = GetLocationUtils();
 final GlobalKey<ScaffoldMessengerState> rootScaffoldMessengerKey =
@@ -75,8 +74,6 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
     ]);

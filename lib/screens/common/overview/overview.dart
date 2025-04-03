@@ -3,7 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../utils/utils.dart';
 
-class Overview extends StatelessWidget {
+class Overview extends StatefulWidget {
+  const Overview({super.key});
+
+  @override
+  OverviewState createState() => OverviewState();
+}
+
+class OverviewState extends State<Overview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

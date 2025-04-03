@@ -1,14 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 // import 'package:hare_hotel/screens/common/homeMainV1/home_main_v1.dart';
-import '../../../commonView/common_view.dart';
-import '../../../commonView/custom_text_field.dart';
+import '../../commonView/common_view.dart';
+import '../../commonView/custom_text_field.dart';
 // import '../../../commonView/social_login.dart';
 // import '../../../dialogs/forgotPasswordDialog/forgot_password_dialog.dart';
-import '../../../networking/api_base_helper.dart';
-import '../../../utils/utils.dart';
+import '../../networking/api_base_helper.dart';
+import '../../utils/utils.dart';
 // import '../signUp/sign_up.dart';
 import 'login_bloc.dart';
 import 'login_dl.dart';

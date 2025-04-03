@@ -1,13 +1,19 @@
 import 'dart:io';
 
-import '../../../networking/api_base_helper.dart';
-import '../../../utils/utils.dart';
+import '../../networking/api_base_helper.dart';
+import '../../utils/utils.dart';
 
 class LoginRepo {
   final ApiBaseHelper _apiBaseHelper = ApiBaseHelper();
 
-  login(String loginType, String emailAddress, String password, String name,
-      String loginId, String profileImage) async {
+  login(
+    String loginType,
+    String emailAddress,
+    String password,
+    String name,
+    String loginId,
+    String profileImage,
+  ) async {
     final response = await _apiBaseHelper.post(
       ApiConst.endPointLogin,
       body: {
@@ -17,9 +23,10 @@ class LoginRepo {
         ApiParam.paramPassword: password,
         ApiParam.paramFullName: name,
         ApiParam.paramLoginId: loginId,
-        ApiParam.paramLoginDevice: Platform.isAndroid
-            ? loginDeviceFlutterAndroid
-            : loginDeviceFlutterIos,
+        ApiParam.paramLoginDevice:
+            Platform.isAndroid
+                ? loginDeviceFlutterAndroid
+                : loginDeviceFlutterIos,
         ApiParam.paramProfileImage: profileImage,
         ApiParam.paramSelectLanguage: prefGetString(prefSelectedLanguageCode),
         ApiParam.paramSelectCurrency: prefGetString(prefSelectedCurrency),
@@ -33,7 +40,7 @@ class LoginRepo {
       ApiConst.endPointForgotPassReq,
       body: {
         ApiParam.paramContactNumber: phoneNum,
-        ApiParam.paramSelectCountryCode: countryCode
+        ApiParam.paramSelectCountryCode: countryCode,
       },
     );
     return response;
@@ -44,7 +51,7 @@ class LoginRepo {
       ApiConst.endPointGetProfile,
       body: {
         ApiParam.paramUserId: prefGetInt(prefUserId),
-        ApiParam.paramAccessToken: prefGetString(prefAccessToken)
+        ApiParam.paramAccessToken: prefGetString(prefAccessToken),
       },
     );
     return response;
@@ -57,9 +64,10 @@ class LoginRepo {
         ApiParam.paramUserId: userId,
         ApiParam.paramOtp: otp,
         ApiParam.paramNewPassword: password,
-        ApiParam.paramLoginDevice: Platform.isAndroid
-            ? loginDeviceFlutterAndroid
-            : loginDeviceFlutterIos
+        ApiParam.paramLoginDevice:
+            Platform.isAndroid
+                ? loginDeviceFlutterAndroid
+                : loginDeviceFlutterIos,
       },
     );
     return response;

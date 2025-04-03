@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../commonView/common_view.dart';
-import '../../../utils/utils.dart';
+import '../../commonView/common_view.dart';
+import '../../utils/utils.dart';
 import 'splash_bloc.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
+  const Splash({super.key});
 
   @override
   SplashState createState() => SplashState();

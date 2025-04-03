@@ -17,13 +17,13 @@ import 'package:url_launcher/url_launcher_string.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'shared_pref_utill.dart';
-import '../screens/common/base_dl.dart';
+import '../screens/base_dl.dart';
 import '../googleApi/geocoding_api_call.dart';
 import '../blocs/bloc.dart';
 import '../constant/constant.dart';
 import '../main.dart';
-import '../screens/common/splash/splash.dart';
-import '../screens/common/login/login_dl.dart';
+import '../screens/splash/splash.dart';
+import '../screens/login/login_dl.dart';
 
 export '../commonView/load_image_with_placeholder.dart';
 export '../constant/constant.dart';

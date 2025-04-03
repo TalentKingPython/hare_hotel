@@ -1,9 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
-import '../../../blocs/bloc.dart';
-import '../../../commonView/customCountryCodePicker/country_code.dart';
-import '../../../utils/utils.dart';
+import '../../blocs/bloc.dart';
+import '../../commonView/customCountryCodePicker/country_code.dart';
+import '../../utils/utils.dart';
 import 'login.dart';
 import 'login_dl.dart';
 import 'login_repo.dart';

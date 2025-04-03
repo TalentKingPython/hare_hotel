@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hare_hotel/screens/common/restaurant/restaurant.dart';
 
 import '../../../utils/utils.dart';
-import '../desktop/overview.dart';
-import '../desktop/thingstodo/date.dart';
-import '../desktop/thingstodo.dart';
+import '../overview/overview.dart';
+import '../thingsTodo/thingstodo.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
+class HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
@@ -192,14 +194,8 @@ class _HomeScreenState extends State<HomeScreen>
         controller: _tabController,
         children: [
           Center(child: Overview()),
-          Center(child: Thingstodo()),
-          Center(
-            // child: Text(
-            //   'Restaurant1',
-            //   style: TextStyle(fontSize: 14, color: colorTextCommonDark),
-            // ),
-            child: CompactDatePickerDemo(),
-          ),
+          Center(child: ThingsToDo()),
+          Center(child: Restaurant()),
           Center(
             child: Text(
               'Car Rental1',

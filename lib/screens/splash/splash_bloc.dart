@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:hare_hotel/dialogs/simple_dialog_util.dart';
 
-import '../../../blocs/bloc.dart';
-import '../../../utils/utils.dart';
+import '../../blocs/bloc.dart';
+import '../../utils/utils.dart';
 // import '../homeMainV1/home_main_v1.dart';
 import '../login/login.dart';
 import 'splash.dart';

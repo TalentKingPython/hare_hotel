@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../utils/utils.dart';
-import '../desktop/thingstodo/date.dart';
+import '../../../commonView/compact_date_picker.dart';
 
-class Thingstodo extends StatelessWidget {
+class ThingsToDo extends StatefulWidget {
+  const ThingsToDo({super.key});
+
+  @override
+  ThingsToDoState createState() => ThingsToDoState();
+}
+
+class ThingsToDoState extends State<ThingsToDo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +22,6 @@ class Thingstodo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               //Attraction Section
               Container(
                 padding: EdgeInsets.symmetric(vertical: deviceHeight * 0.1),
@@ -84,7 +90,6 @@ class Thingstodo extends StatelessWidget {
                         _attractionCard(),
                         _attractionCard(),
                       ],
-
                     ),
                     SizedBox(height: deviceHeight * 0.05),
                     Row(
@@ -95,7 +100,6 @@ class Thingstodo extends StatelessWidget {
                         _attractionCard(),
                         _attractionCard(),
                       ],
-
                     ),
                   ],
                 ),
@@ -271,7 +275,8 @@ class Thingstodo extends StatelessWidget {
                                       ),
                                     ),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         SvgPicture.asset(
                                           "assets/images/write-pen.svg",
@@ -289,9 +294,7 @@ class Thingstodo extends StatelessWidget {
                                         ),
                                       ],
                                     ),
-
                                   ),
-
                                 ],
                               ),
                             ],
@@ -376,7 +379,7 @@ class Thingstodo extends StatelessWidget {
                               color: colorPrimary,
                               fontSize: deviceWidth * 0.012,
                               fontWeight: FontWeight.bold,
-                            )
+                            ),
                           ),
 
                           //facilities
@@ -407,7 +410,7 @@ class Thingstodo extends StatelessWidget {
                                   fontSize: deviceWidth * 0.013,
                                   fontWeight: FontWeight.bold,
                                 ),
-                              )
+                              ),
                             ],
                           ),
 
@@ -429,7 +432,7 @@ class Thingstodo extends StatelessWidget {
                                   fontSize: deviceWidth * 0.013,
                                   fontWeight: FontWeight.bold,
                                 ),
-                              )
+                              ),
                             ],
                           ),
 
@@ -451,7 +454,7 @@ class Thingstodo extends StatelessWidget {
                                   fontSize: deviceWidth * 0.013,
                                   fontWeight: FontWeight.bold,
                                 ),
-                              )
+                              ),
                             ],
                           ),
 
@@ -473,7 +476,7 @@ class Thingstodo extends StatelessWidget {
                                   fontSize: deviceWidth * 0.013,
                                   fontWeight: FontWeight.bold,
                                 ),
-                              )
+                              ),
                             ],
                           ),
 
@@ -495,7 +498,7 @@ class Thingstodo extends StatelessWidget {
                                   fontSize: deviceWidth * 0.013,
                                   fontWeight: FontWeight.bold,
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ],
@@ -592,10 +595,11 @@ class Thingstodo extends StatelessWidget {
                                 ),
                                 SizedBox(height: deviceHeight * 0.015),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children:[
-                                    CompactDatePickerDemo(),
+                                  children: [
+                                    CompactDatePicker(),
                                     Container(
                                       width: deviceWidth * 0.08,
                                       height: deviceHeight * 0.05,
@@ -611,16 +615,16 @@ class Thingstodo extends StatelessWidget {
                                       ),
 
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
                                         children: [
-
                                           // InkWell(
                                           //   child: Image.asset(
                                           //     "assets/images/users.png",
                                           //     width: deviceHeight * 0.05,
                                           //     height: deviceHeight * 0.05,
                                           //   ),
-                                            // onTap: () => _selectUser(context),
+                                          // onTap: () => _selectUser(context),
                                           // ),
 
                                           // SizedBox(width: 6),
@@ -638,7 +642,6 @@ class Thingstodo extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-
 
                                 SizedBox(height: deviceHeight * 0.01),
                               ],
@@ -663,7 +666,7 @@ class Thingstodo extends StatelessWidget {
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Container(
                                         height: deviceHeight * 0.04,
@@ -825,7 +828,6 @@ class Thingstodo extends StatelessWidget {
       ),
     );
   }
-
 
   Widget _attractionCard() {
     return Container(

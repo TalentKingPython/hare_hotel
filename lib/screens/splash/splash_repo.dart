@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import '../../../networking/api_base_helper.dart';
-import '../../../utils/utils.dart';
+import '../../networking/api_base_helper.dart';
+import '../../utils/utils.dart';
 
 class SplashRepo {
   final ApiBaseHelper _apiBaseHelper = ApiBaseHelper();
@@ -11,7 +11,7 @@ class SplashRepo {
       ApiConst.endPointGetRunningService,
       body: {
         ApiParam.paramUserId: prefGetInt(prefUserId),
-        ApiParam.paramAccessToken: prefGetString(prefAccessToken)
+        ApiParam.paramAccessToken: prefGetString(prefAccessToken),
       },
     );
     return response;
@@ -21,10 +21,11 @@ class SplashRepo {
     final response = await _apiBaseHelper.post(
       ApiConst.endPointAppVersionCheck,
       body: {
-        ApiParam.paramLoginDevice: Platform.isAndroid
-            ? loginDeviceFlutterAndroid
-            : loginDeviceFlutterIos,
-        ApiParam.paramAppType: 0
+        ApiParam.paramLoginDevice:
+            Platform.isAndroid
+                ? loginDeviceFlutterAndroid
+                : loginDeviceFlutterIos,
+        ApiParam.paramAppType: 0,
       },
     );
     return response;
