@@ -213,7 +213,7 @@ class OverviewState extends State<Overview> {
                                     ),
                                     child: Center(
                                       child: SvgPicture.asset(
-                                        "assets/images/share-06.svg",
+                                        "assets/svgs/share-06.svg",
                                         width: deviceHeight * 0.03,
                                         height: deviceHeight * 0.03,
                                       ),
@@ -318,7 +318,7 @@ class OverviewState extends State<Overview> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SvgPicture.asset(
-                                  "assets/images/star-06.svg",
+                                  "assets/svgs/star-06.svg",
                                   width: deviceWidth * 0.015,
                                   height: deviceWidth * 0.015,
                                 ),
@@ -2338,7 +2338,7 @@ class OverviewState extends State<Overview> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SvgPicture.asset(
-                    "assets/images/experience-reserve.svg",
+                    "assets/svgs/experience-reserve.svg",
                     width: deviceWidth * 0.016,
                     height: deviceWidth * 0.016,
                   ),

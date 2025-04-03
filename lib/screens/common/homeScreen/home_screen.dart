@@ -135,7 +135,7 @@ class HomeScreenState extends State<HomeScreen>
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SvgPicture.asset(
-                            'assets/images/coins-swap-02.svg',
+                            'assets/svgs/coins-swap-02.svg',
                             width: 16,
                             height: 16,
                           ),

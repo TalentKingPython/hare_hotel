@@ -279,7 +279,7 @@ class ThingsToDoState extends State<ThingsToDo> {
                                           MainAxisAlignment.center,
                                       children: [
                                         SvgPicture.asset(
-                                          "assets/images/write-pen.svg",
+                                          "assets/svgs/write-pen.svg",
                                           width: deviceHeight * 0.025,
                                           height: deviceHeight * 0.025,
                                         ),

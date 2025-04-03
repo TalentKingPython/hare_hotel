@@ -23,6 +23,7 @@ class RestaurantState extends State<Restaurant> {
       child: ListView(
         children: [
           Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 'Top Restaurant in Bergen',
