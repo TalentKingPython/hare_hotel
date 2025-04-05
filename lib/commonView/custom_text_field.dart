@@ -33,7 +33,7 @@ class TextFormFieldCustom extends StatefulWidget {
   final AutovalidateMode? autoValidateMode;
 
   const TextFormFieldCustom({
-    Key? key,
+    super.key,
     this.hint,
     this.setPassword = false,
     this.radius,
@@ -64,7 +64,7 @@ class TextFormFieldCustom extends StatefulWidget {
     this.maxLine = 1,
     this.autoValidateMode = AutovalidateMode.disabled,
     this.useLabelWithBorder = false,
-  }) : super(key: key);
+  });
 
   @override
   State<StatefulWidget> createState() => TextFormFieldCustomState();

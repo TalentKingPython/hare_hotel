@@ -1,0 +1,935 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../utils/utils.dart';
+
+class CarRental extends StatefulWidget {
+  const CarRental({super.key});
+
+  @override
+  CarRentalState createState() => CarRentalState();
+}
+
+class CarRentalState extends State<CarRental> {
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Stack(
+            children: [
+              Image.asset('assets/images/car.png'),
+              Positioned(
+                top: deviceHeight * 0.15,
+                left: 0,
+                right: 0,
+                child: Column(
+                  spacing: 12,
+                  children: [
+                    Text(
+                      'Bergen Car Rentals',
+                      style: TextStyle(
+                        color: colorWhite,
+                        fontWeight: FontWeight.bold,
+                        fontSize: deviceWidth * 0.036,
+                      ),
+                    ),
+                    SizedBox(
+                      width: deviceWidth * 0.3,
+                      child: Text(
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: colorWhite,
+                          fontSize: deviceWidth * 0.012,
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: colorPrimary,
+                            backgroundColor: colorWhite,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.horizontal(
+                                left: Radius.circular(100),
+                                right: Radius.circular(100),
+                              ),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: Row(
+                            children: [
+                              SvgPicture.asset('assets/svgs/car.svg'),
+                              SizedBox(width: 10),
+                              Text(
+                                'Find Rental Cars',
+                                style: TextStyle(
+                                  fontSize: deviceWidth * 0.012,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: colorWhite,
+                            backgroundColor: colorWhite.withAlpha(50),
+                            shadowColor: Colors.transparent,
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(color: colorWhite.withAlpha(80)),
+                              borderRadius: BorderRadius.horizontal(
+                                left: Radius.circular(100),
+                                right: Radius.circular(100),
+                              ),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: Row(
+                            children: [
+                              SvgPicture.asset('assets/svgs/map_pick.svg'),
+                              SizedBox(width: 10),
+                              Text(
+                                'Browse Locations',
+                                style: TextStyle(
+                                  fontSize: deviceWidth * 0.012,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: deviceWidth * 0.085,
+                right: deviceWidth * 0.085,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: colorWhite,
+                    borderRadius: BorderRadius.circular(deviceWidth * 0.014),
+                    boxShadow: [
+                      BoxShadow(
+                        color: colorGray.withAlpha(10),
+                        offset: Offset(10, 10),
+                      ),
+                    ],
+                  ),
+                  padding: EdgeInsets.all(deviceWidth * 0.01),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    spacing: 15,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Same Drop Off',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: deviceWidth * 0.015,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          Icon(Icons.expand_more),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0.5,
+                              foregroundColor: colorHotelText,
+                              backgroundColor: colorWhite,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.horizontal(
+                                  left: Radius.circular(100),
+                                  right: Radius.circular(100),
+                                ),
+                              ),
+                              padding: EdgeInsets.only(left: 15, right: 40),
+                            ),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.location_on_outlined,
+                                  size: deviceWidth * 0.015,
+                                ),
+                                SizedBox(width: 5),
+                                Text(
+                                  'Find Rental Cars',
+                                  style: TextStyle(
+                                    fontSize: deviceWidth * 0.011,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
+            child: Column(
+              children: [
+                SizedBox(height: deviceHeight * 0.1),
+                Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Top Restaurant in Bergen',
+                          style: TextStyle(
+                            color: colorBlack,
+                            fontSize: deviceWidth * 0.028,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              '403 results ',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              'match your filters. ',
+                              style: TextStyle(color: colorTextLight),
+                            ),
+                            Text(
+                              'Clear all',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: colorPrimary,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const Spacer(),
+                    Text(
+                      'Sort by:  ',
+                      style: TextStyle(
+                        color: colorBlack,
+                        fontSize: deviceWidth * 0.012,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      width: deviceWidth * 0.18,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          fillColor: colorWhite,
+                          filled: true,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(
+                              deviceWidth * .1,
+                            ),
+                          ),
+                          hintStyle: TextStyle(
+                            color: colorBlack,
+                            fontSize: deviceWidth * 0.012,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          hintText: 'Features',
+                          contentPadding: EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 5,
+                          ),
+                          isDense: true,
+                          prefixIcon: Align(
+                            widthFactor: 1.0,
+                            heightFactor: 1.0,
+                            child: SvgPicture.asset(
+                              'assets/svgs/search.svg',
+                              width: deviceWidth * .012,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: deviceHeight * .05),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withAlpha(25),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: Offset(
+                                0,
+                                3,
+                              ), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        padding: EdgeInsets.symmetric(
+                          vertical: deviceHeight * 0.02,
+                          horizontal: deviceWidth * .02,
+                        ),
+                        margin: EdgeInsets.symmetric(
+                          horizontal: deviceWidth * .001,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Establishment Type',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return checkBoxText('Restaurant', index == 0);
+                              },
+                            ),
+                            Divider(height: deviceWidth * 0.02),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Name Category',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return checkBoxText(
+                                  'Lorem ipsum sit amer',
+                                  index == 0,
+                                );
+                              },
+                            ),
+                            Divider(height: deviceWidth * 0.02),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Awards',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            checkBoxText('Lorem ipsum sit amer', false),
+                            Divider(height: deviceHeight * 0.02),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Traveler Rating',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: 3,
+                              itemBuilder: (context, index) {
+                                return checkBoxText('And Up', index == 0);
+                              },
+                            ),
+                            Divider(height: deviceWidth * 0.02),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Name Category',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return checkBoxText(
+                                  'Lorem ipsum sit amer',
+                                  index == 0,
+                                );
+                              },
+                            ),
+                            Divider(height: deviceWidth * 0.02),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Name Category',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return checkBoxText(
+                                  'Lorem ipsum sit amer',
+                                  index == 0,
+                                );
+                              },
+                            ),
+                            Divider(height: deviceWidth * 0.02),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Name Category',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return checkBoxText(
+                                  'Lorem ipsum sit amer',
+                                  index == 0,
+                                );
+                              },
+                            ),
+                            Divider(height: deviceWidth * 0.02),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'Name Category',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .015,
+                                  ),
+                                ),
+                                Container(
+                                  width: deviceWidth * .023,
+                                  height: deviceWidth * .023,
+                                  decoration: BoxDecoration(
+                                    color: colorMainBackground,
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(Icons.expand_less),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: deviceHeight * 0.02),
+                            ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: 4,
+                              itemBuilder: (context, index) {
+                                return checkBoxText(
+                                  'Lorem ipsum sit amer',
+                                  index == 0,
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: deviceWidth * 0.02),
+                    Expanded(
+                      flex: 13,
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: deviceWidth * 0.01,
+                              vertical: deviceWidth * 0.005,
+                            ),
+                            decoration: BoxDecoration(
+                              color: colorWhite,
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: colorBlack.withAlpha(25),
+                                  spreadRadius: 2,
+                                  blurRadius: 5,
+                                  offset: Offset(0, 3),
+                                ),
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/svgs/question_mark.svg',
+                                ),
+                                SizedBox(width: deviceWidth * 0.01),
+                                Text(
+                                  'Looking to expand your search outside of Bergen? We have suggestions.',
+                                  style: TextStyle(
+                                    fontSize: deviceWidth * 0.012,
+                                    color: colorBlack,
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Expand your search',
+                                    style: TextStyle(
+                                      fontSize: deviceWidth * 0.012,
+                                      color: colorPrimary,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: deviceHeight * 0.02),
+                          restaurantCard(),
+                          restaurantCard(),
+                          restaurantCard(),
+                          SizedBox(height: deviceHeight * 0.02),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Fine Dining',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: deviceWidth * .018,
+                                ),
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  elevation: 0,
+                                  backgroundColor: colorMainBackground,
+                                  foregroundColor: colorBlack,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(100),
+                                    side: BorderSide(
+                                      color: colorButtonBorder,
+                                      width: 1,
+                                    ), // Added border color
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  'View More',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: deviceWidth * .010,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: deviceHeight * 0.01),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            clipBehavior: Clip.none,
+                            child: Row(
+                              spacing: deviceWidth * 0.012,
+                              children: [
+                                diningCard(),
+                                diningCard(),
+                                diningCard(),
+                                diningCard(),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: deviceHeight * 0.01),
+                          restaurantCard(),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget checkBoxText(String text, bool checked) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: deviceHeight * 0.01),
+      child: Row(
+        children: [
+          Icon(
+            checked ? Icons.check_circle : Icons.circle_outlined,
+            color: checked ? colorPrimary : colorButtonBorder,
+            size: 17,
+          ),
+          SizedBox(width: 10),
+          Text(text, style: TextStyle(fontSize: deviceWidth * 0.012)),
+        ],
+      ),
+    );
+  }
+
+  Widget restaurantCard() {
+    return Container(
+      margin: EdgeInsets.only(top: deviceHeight * 0.02),
+      padding: EdgeInsets.all(deviceWidth * 0.02),
+      decoration: BoxDecoration(
+        color: colorWhite,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withAlpha(25),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.asset(
+              'assets/images/restaurant_image.png', // Replace with actual image path
+              width: deviceHeight * 0.25,
+              height: deviceHeight * 0.22,
+              fit: BoxFit.cover,
+            ),
+          ),
+          SizedBox(width: deviceWidth * 0.02),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.star,
+                      color: colorYellow,
+                      size: deviceWidth * 0.016,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: colorYellow,
+                      size: deviceWidth * 0.016,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: colorYellow,
+                      size: deviceWidth * 0.016,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: colorYellow,
+                      size: deviceWidth * 0.016,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: colorYellow,
+                      size: deviceWidth * 0.016,
+                    ),
+                    Text(
+                      ' 4.8 ',
+                      style: TextStyle(
+                        fontSize: deviceWidth * 0.012,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      '(278 Reviews)',
+                      style: TextStyle(
+                        color: colorTextLight,
+                        fontSize: deviceWidth * 0.012,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: deviceHeight * 0.01),
+                Row(
+                  children: [
+                    Text(
+                      'Lorem ipsum dolor sit amet',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: deviceWidth * 0.015,
+                      ),
+                    ),
+                    SizedBox(width: deviceWidth * 0.02),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: colorPrimary,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 3,
+                      ),
+                      child: Text(
+                        'Sponsored',
+                        style: TextStyle(
+                          color: colorWhite,
+                          fontWeight: FontWeight.bold,
+                          fontSize: deviceWidth * 0.008,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: deviceHeight * 0.01),
+                Row(
+                  children: [
+                    Text(
+                      'Open Now',
+                      style: TextStyle(
+                        color: colorPrimary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      ' (7:30 AM - 11:00 PM) ',
+                      style: TextStyle(
+                        color: colorTextLight,
+                        fontSize: deviceWidth * 0.012,
+                      ),
+                    ),
+                    Icon(Icons.circle, size: 5, color: colorTextLight),
+                    Text(
+                      ' \$\$ ',
+                      style: TextStyle(
+                        color: colorTextLight,
+                        fontSize: deviceWidth * 0.012,
+                      ),
+                    ),
+                    Icon(Icons.circle, size: 5, color: colorTextLight),
+                    Text(
+                      ' \$\$\$',
+                      style: TextStyle(
+                        color: colorTextLight,
+                        fontSize: deviceWidth * 0.012,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: deviceHeight * 0.05),
+                Row(
+                  children: [
+                    Chip(
+                      label: Text('American'),
+                      backgroundColor: colorWhite,
+                      elevation: 1,
+                    ),
+                    SizedBox(width: deviceWidth * 0.01),
+                    Chip(
+                      label: Text('Steakhouse'),
+                      backgroundColor: colorWhite,
+                      elevation: 1,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget diningCard() {
+    return Container(
+      width: deviceHeight * 0.24,
+      padding: EdgeInsets.all(deviceWidth * 0.01),
+      decoration: BoxDecoration(
+        color: colorWhite,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withAlpha(25),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Column(
+        spacing: deviceHeight * 0.015,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.asset(
+              'assets/images/restaurant_image.png', // Replace with actual image path
+              width: deviceHeight * 0.2,
+              height: deviceHeight * 0.2,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Text(
+            'Lorem ipsum dolor sit amet, consectetur',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: deviceWidth * 0.014,
+            ),
+          ),
+          Row(
+            children: [
+              Icon(Icons.star, color: colorYellow, size: deviceWidth * 0.012),
+              Text(
+                ' 4.8 ',
+                style: TextStyle(
+                  fontSize: deviceWidth * 0.009,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '(278 Reviews)',
+                style: TextStyle(
+                  color: colorTextLight,
+                  fontSize: deviceWidth * 0.009,
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Text('From', style: TextStyle(fontSize: deviceWidth * 0.012)),
+              Text(
+                ' \$94 USD ',
+                style: TextStyle(
+                  color: colorPrimary,
+                  fontSize: deviceWidth * 0.012,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '/adult',
+                style: TextStyle(
+                  color: colorTextLight,
+                  fontSize: deviceWidth * 0.012,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}

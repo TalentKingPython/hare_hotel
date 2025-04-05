@@ -83,7 +83,8 @@ class LoadImageWithPlaceHolder extends StatelessWidget {
 
   getErrorHolder() {
     return Center(
-      child: errorHolder ?? /*getPlaceHolderImage()*/
+      child:
+          errorHolder ?? /*getPlaceHolderImage()*/
           Container(color: colorShimmerBg),
     );
   }
@@ -94,21 +95,20 @@ class LoadImageWithPlaceHolder extends StatelessWidget {
     } else {
       return AnimatedSwitcher(
         duration: const Duration(milliseconds: 200),
-        transitionBuilder: (Widget child, Animation<double> animation) =>
-            FadeTransition(
-          opacity: animation,
-          child: child,
-        ),
-        child: frame != null
-            ? child
-            : placeholder ??
-                /*Shimmer.fromColors(
+        transitionBuilder:
+            (Widget child, Animation<double> animation) =>
+                FadeTransition(opacity: animation, child: child),
+        child:
+            frame != null
+                ? child
+                : placeholder ??
+                    /*Shimmer.fromColors(
                   baseColor: colorShimmerBg,
                   highlightColor: Colors.grey[100],
                   period: const Duration(milliseconds: 800),
                   child: getPlaceHolderImage(),
                 )*/
-                Container(color: colorShimmerBg),
+                    Container(color: colorShimmerBg),
       );
     }
   }
@@ -122,13 +122,13 @@ class LoadImageSimple extends StatelessWidget {
   final double? width;
 
   const LoadImageSimple({
-    Key? key,
+    super.key,
     required this.image,
     this.defaultAssetImage,
     this.imageFit,
     this.height,
     this.width,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

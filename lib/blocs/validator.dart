@@ -24,15 +24,15 @@ validateCardNumber(String? value) {
 
 validateExpirationDate(value) {
   String? validateCardDate = CardUtils().validateDate(value);
-  if (validateCardDate != null) {
-    return validateCardDate;
-  } else {
-    return "";
-  }
+  return validateCardDate;
 }
 
 validateWithFixLength(
-    String value, int length, String emptyMsg, String invalidMsg) {
+  String value,
+  int length,
+  String emptyMsg,
+  String invalidMsg,
+) {
   if (value.trim().isEmpty) {
     return emptyMsg;
   } else if (value.trim().length != length) {
@@ -124,7 +124,11 @@ String validateEmailOrNumber(String value) {
 }
 
 validateCourierGoods(
-    dynamic value, double goodsItem, String emptyMsg, String invalidMsg) {
+  dynamic value,
+  double goodsItem,
+  String emptyMsg,
+  String invalidMsg,
+) {
   if (value.trim().isEmpty) {
     return emptyMsg;
   } else if (value.trim().isNotEmpty &&
@@ -141,147 +145,163 @@ class Validator {
 
   validateEmptyField(String message) {
     return StreamTransformer<String, String>.fromHandlers(
-        handleData: (value, sink) {
-      if ((value.trim()).isEmpty) {
-        sink.addError(message);
-      } else {
-        sink.add(value);
-      }
-    });
+      handleData: (value, sink) {
+        if ((value.trim()).isEmpty) {
+          sink.addError(message);
+        } else {
+          sink.add(value);
+        }
+      },
+    );
   }
 
   validateEmptyFieldWithLength(
-      int length, String emptyMessage, String lengthMessage) {
+    int length,
+    String emptyMessage,
+    String lengthMessage,
+  ) {
     return StreamTransformer<String, String>.fromHandlers(
-        handleData: (value, sink) {
-      if (value.trim().isEmpty) {
-        sink.addError(emptyMessage);
-      } else if (value.trim().length < length) {
-        sink.addError(lengthMessage);
-      } else {
-        sink.add(value);
-      }
-    });
+      handleData: (value, sink) {
+        if (value.trim().isEmpty) {
+          sink.addError(emptyMessage);
+        } else if (value.trim().length < length) {
+          sink.addError(lengthMessage);
+        } else {
+          sink.add(value);
+        }
+      },
+    );
   }
 
   validateExpirationDate() {
     return StreamTransformer<String, String>.fromHandlers(
-        handleData: (value, sink) {
-      bool isAfter = false;
-      if ((value.trim()).isNotEmpty) {
-        DateTime? selectedDateTime = DateTime.tryParse(value.trim());
-        isAfter = selectedDateTime!
-            .isAfter(DateTime(DateTime.now().year, DateTime.now().month - 1));
-      }
-      if ((value.trim()).isEmpty) {
-        sink.addError(languages.selectCardDate);
-      } else if (!isAfter) {
-        sink.addError(languages.selectValidDate);
+      handleData: (value, sink) {
+        bool isAfter = false;
+        if ((value.trim()).isNotEmpty) {
+          DateTime? selectedDateTime = DateTime.tryParse(value.trim());
+          isAfter = selectedDateTime!.isAfter(
+            DateTime(DateTime.now().year, DateTime.now().month - 1),
+          );
+        }
+        if ((value.trim()).isEmpty) {
+          sink.addError(languages.selectCardDate);
+        } else if (!isAfter) {
+          sink.addError(languages.selectValidDate);
+        } else {
+          sink.add(value);
+        }
+      },
+    );
+  }
+
+  final validateFirstName = StreamTransformer<String, String>.fromHandlers(
+    handleData: (value, sink) {
+      if (value.trim().isEmpty) {
+        sink.addError(languages.enterFirstName);
       } else {
         sink.add(value);
       }
-    });
-  }
+    },
+  );
 
-  final validateFirstName =
-      StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.trim().isEmpty) {
-      sink.addError(languages.enterFirstName);
-    } else {
-      sink.add(value);
-    }
-  });
+  final validateLastName = StreamTransformer<String, String>.fromHandlers(
+    handleData: (value, sink) {
+      if (value.trim().isEmpty) {
+        sink.addError(languages.enterLastName);
+      } else {
+        sink.add(value);
+      }
+    },
+  );
 
-  final validateLastName =
-      StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.trim().isEmpty) {
-      sink.addError(languages.enterLastName);
-    } else {
-      sink.add(value);
-    }
-  });
+  final validatePassword = StreamTransformer<String, String>.fromHandlers(
+    handleData: (value, sink) {
+      if (value.trim().isEmpty) {
+        sink.addError(languages.enterPass);
+      } else if (value.trim().length < 6) {
+        sink.addError(languages.passShortMsg);
+      } else {
+        sink.add(value);
+      }
+    },
+  );
 
-  final validatePassword =
-      StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.trim().isEmpty) {
-      sink.addError(languages.enterPass);
-    } else if (value.trim().length < 6) {
-      sink.addError(languages.passShortMsg);
-    } else {
-      sink.add(value);
-    }
-  });
+  final validateMobileNumber = StreamTransformer<String, String>.fromHandlers(
+    handleData: (value, sink) {
+      if (value.trim().isEmpty) {
+        sink.addError(languages.enterMobileNumber);
+      } else {
+        sink.add(value);
+      }
+    },
+  );
 
-  final validateMobileNumber =
-      StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.trim().isEmpty) {
-      sink.addError(languages.enterMobileNumber);
-    } else {
-      sink.add(value);
-    }
-  });
+  final validateOldPassword = StreamTransformer<String, String>.fromHandlers(
+    handleData: (value, sink) {
+      if ((value.trim()).isEmpty) {
+        sink.addError(languages.enterOldPass);
+      } else if ((value.trim()).length < 6) {
+        sink.addError(languages.passShortMsg);
+      } else {
+        sink.add(value);
+      }
+    },
+  );
 
-  final validateOldPassword =
-      StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if ((value.trim()).isEmpty) {
-      sink.addError(languages.enterOldPass);
-    } else if ((value.trim()).length < 6) {
-      sink.addError(languages.passShortMsg);
-    } else {
-      sink.add(value);
-    }
-  });
-
-  final validateNewPassword =
-      StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.trim().isEmpty) {
-      sink.addError(languages.enterNewPass);
-    } else if (value.trim().length < 6) {
-      sink.addError(languages.passShortMsg);
-    } else {
-      sink.add(value);
-    }
-  });
+  final validateNewPassword = StreamTransformer<String, String>.fromHandlers(
+    handleData: (value, sink) {
+      if (value.trim().isEmpty) {
+        sink.addError(languages.enterNewPass);
+      } else if (value.trim().length < 6) {
+        sink.addError(languages.passShortMsg);
+      } else {
+        sink.add(value);
+      }
+    },
+  );
 
   validateWithFixLength(int length, String emptyMsg, String invalidMsg) {
     return StreamTransformer<String, String>.fromHandlers(
-        handleData: (value, sink) {
-      if (value.trim().isEmpty) {
-        sink.addError(emptyMsg);
-      } else if (value.trim().length != length) {
-        sink.addError(invalidMsg);
-      } else {
-        sink.add(value);
-      }
-    });
+      handleData: (value, sink) {
+        if (value.trim().isEmpty) {
+          sink.addError(emptyMsg);
+        } else if (value.trim().length != length) {
+          sink.addError(invalidMsg);
+        } else {
+          sink.add(value);
+        }
+      },
+    );
   }
 
   validateEmail(String emptyMsg, String invalidMsg) {
     return StreamTransformer<String, String>.fromHandlers(
-        handleData: (value, sink) {
-      String pattern =
-          r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-      if (value.trim().isEmpty) {
-        sink.addError(emptyMsg);
-      } else if (!RegExp(pattern).hasMatch(value)) {
-        sink.addError(invalidMsg);
-      } else {
-        sink.add(value);
-      }
-    });
+      handleData: (value, sink) {
+        String pattern =
+            r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+        if (value.trim().isEmpty) {
+          sink.addError(emptyMsg);
+        } else if (!RegExp(pattern).hasMatch(value)) {
+          sink.addError(invalidMsg);
+        } else {
+          sink.add(value);
+        }
+      },
+    );
   }
 
   validateCourierGoods(double goodsItem, String emptyMsg, String invalidMsg) {
     return StreamTransformer<String, String>.fromHandlers(
-        handleData: (value, sink) {
-      if (value.trim().isEmpty) {
-        sink.addError(emptyMsg);
-      } else if (value.trim().isNotEmpty &&
-          double.parse(value.trim()) > goodsItem) {
-        sink.addError(invalidMsg);
-      } else {
-        sink.add(value);
-      }
-    });
+      handleData: (value, sink) {
+        if (value.trim().isEmpty) {
+          sink.addError(emptyMsg);
+        } else if (value.trim().isNotEmpty &&
+            double.parse(value.trim()) > goodsItem) {
+          sink.addError(invalidMsg);
+        } else {
+          sink.add(value);
+        }
+      },
+    );
   }
 }

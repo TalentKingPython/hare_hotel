@@ -32,7 +32,7 @@ class ApiBaseHelper {
         onResponse: (response, handler) {
           return handler.next(response);
         },
-        onError: (DioError e, handler) {
+        onError: (DioException e, handler) {
           return handler.next(e);
         },
       ),

@@ -4,6 +4,7 @@
 /// order_status : 1
 /// service_cat_id : 5
 /// message_code : 1
+library;
 
 class GetRunningServicePojo {
   int? _status;
@@ -25,7 +26,14 @@ class GetRunningServicePojo {
 
   int get messageCode => _messageCode ?? 0;
 
-  GetRunningServicePojo({int? status, String? message, int? orderId, int? orderStatus, int? serviceCatId, int? messageCode}) {
+  GetRunningServicePojo({
+    int? status,
+    String? message,
+    int? orderId,
+    int? orderStatus,
+    int? serviceCatId,
+    int? messageCode,
+  }) {
     _status = status;
     _message = message;
     _orderId = orderId;

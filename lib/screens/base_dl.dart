@@ -1,6 +1,7 @@
 /// status : 1
 /// message : "success!"
 /// message_code : 1
+library;
 
 class BaseModel {
   int? _status;

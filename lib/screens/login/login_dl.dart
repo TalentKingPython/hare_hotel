@@ -17,6 +17,7 @@
 /// select_language : "en"
 /// emergency_contact : ""
 /// server_time_zone : "UTC"
+library;
 
 class LoginPojo {
   int? _status;
@@ -77,27 +78,28 @@ class LoginPojo {
 
   dynamic get credit => _credit;
 
-  LoginPojo(
-      {int? status,
-      String? message,
-      int? messageCode,
-      int? userId,
-      int? userVerified,
-      String? firstName,
-      String? lastName,
-      String? accessToken,
-      String? email,
-      String? loginType,
-      String? profileImage,
-      dynamic gender,
-      dynamic credit,
-      String? contactNumber,
-      String? referralCode,
-      String? selectCountryCode,
-      String? selectCurrency,
-      String? selectLanguage,
-      String? emergencyContact,
-      String? serverTimeZone}) {
+  LoginPojo({
+    int? status,
+    String? message,
+    int? messageCode,
+    int? userId,
+    int? userVerified,
+    String? firstName,
+    String? lastName,
+    String? accessToken,
+    String? email,
+    String? loginType,
+    String? profileImage,
+    dynamic gender,
+    dynamic credit,
+    String? contactNumber,
+    String? referralCode,
+    String? selectCountryCode,
+    String? selectCurrency,
+    String? selectLanguage,
+    String? emergencyContact,
+    String? serverTimeZone,
+  }) {
     _status = status;
     _message = message;
     _messageCode = messageCode;
@@ -185,8 +187,12 @@ class ForgotPassReqPojo {
 
   int? get messageCode => _messageCode;
 
-  ForgotPassReqPojo(
-      {int? status, String? message, int? userId, int? messageCode}) {
+  ForgotPassReqPojo({
+    int? status,
+    String? message,
+    int? userId,
+    int? messageCode,
+  }) {
     _status = status;
     _message = message;
     _userId = userId;

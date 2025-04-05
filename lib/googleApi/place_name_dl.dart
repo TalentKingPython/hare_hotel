@@ -1,6 +1,7 @@
 /// html_attributions : []
 /// result : {"address_components":[{"long_name":"Rajkot","short_name":"Rajkot","types":["administrative_area_level_2","political"]},{"long_name":"Gandhigram","short_name":"Gandhigram","types":["sublocality_level_1","sublocality","political"]},{"long_name":"Rajkot","short_name":"Rajkot","types":["locality","political"]},{"long_name":"Gujarat","short_name":"GJ","types":["administrative_area_level_1","political"]},{"long_name":"India","short_name":"IN","types":["country","political"]},{"long_name":"360006","short_name":"360006","types":["postal_code"]}],"adr_address":"Gandhigram Civil Aerodrome, <span class=\"extended-address\">Gandhigram</span>, <span class=\"locality\">Rajkot</span>, <span class=\"region\">Gujarat</span> <span class=\"postal-code\">360006</span>, <span class=\"country-name\">India</span>","business_status":"OPERATIONAL","formatted_address":"Gandhigram Civil Aerodrome, Gandhigram, Rajkot, Gujarat 360006, India","formatted_phone_number":"0281 245 1849","geometry":{"location":{"lat":22.3089497,"lng":70.78226409999999},"viewport":{"northeast":{"lat":22.3102098302915,"lng":70.78370203029151},"southwest":{"lat":22.3075118697085,"lng":70.7810040697085}}},"icon":"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/airport-71.png","international_phone_number":"+91 281 245 1849","name":"Rajkot Airport","photos":[{"height":3984,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/108864724666414414048\">BS PATEL</a>"],"photo_reference":"ATtYBwIhDzQYW2E76iFpvP6QOZvD1oBuHstGY---a02HE1QUn649uUAeU44L6D7km6j3_2MYshmJ3M90OpGT0jepW2drUgdeUYXkZKVL2aWWalpI_eApvG3PAqQ9p79VaJgcYBvFT8gDTOk4_fRFKwjobkU1-43VgvfzwibTI7B1MfhgS-3G","width":5312},{"height":3024,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/110962682103462149680\">Maulin Sorathiya</a>"],"photo_reference":"ATtYBwKlokNLVYa4AlDvK9NA_a3Xrn7ERN5qKRSj1eN9t0IDJh9KG99YKSTHd0JwUIEAyRQFo8YGGYQZf0Xju659ShNRYp3eeJwUnzJ_rNJ58chB8mYPV--V4PPsg71os7Kq0ATdaT8IRpQ3JOaB51pBYBUvdIYpk3BJrKZDD7zAjbTJ0NKE","width":4032},{"height":3120,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/115452706469880906320\">RAHUL BOLIYA</a>"],"photo_reference":"ATtYBwJTv9XyLZgao-XJkN8fYYrAzO5l18_lG6_AJ3HAoly0oaJldQz5TbT7MvgMvPBCTtgeumCbkfZb1dMsZx81uMafO0EFOk9TWiICN0syu-hQJUW5EEdXDCiPuSxhGmRBR4awijZxRZk5AndH-EB7Qvr_ylzKwI5ys0H-OvLOZoImz2PL","width":4160},{"height":3456,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/105911089213711326739\">Siddharth Saurabh</a>"],"photo_reference":"ATtYBwIHYaqc-Vx9FYtULTKqlSrso0yVYz6ujEm6azhn12bqQmhgzGo5TTx3lW5smV4PVqRlFjPNaONN2IiZGmrPfei9moV29OZzm1LK1DXdHcEhSovfxkLO2VTGB6FCHHSIz4fnXhwodxw4K0KxyjuE8DcO7nzrQNCgEo691RufQsGpavkX","width":4608},{"height":535,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/110042787685681163498\">Arnav Manani</a>"],"photo_reference":"ATtYBwLOR5xmlDhnmv-fo5pFY1PhWuebWnwukZ9L5HoVe71ueCJuIImMkAOU7MWutju1yqARpnnmtUCpeyaXhfXDjha9K8VlaMm0P61X2F6cc5fAGWxkCEEQCwtMYhnmgkHV-c4BkrOdh72iN2Zqwouhho5qehoMx_oGzGtMFx7c7Dv0wHdE","width":719},{"height":3456,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/105911089213711326739\">Siddharth Saurabh</a>"],"photo_reference":"ATtYBwIDBoFuVt1vpnUvEZNDKfckVM-S3wVHuqD2EKGkN2dbRN72ZtZ0sSQ-bwGx7AgomMnwMjfVlCZOhqjvQzkmtWTskloHO8IUX1Chhr9Xuq2sNlXEvpk7xFHxkWjNRO-pIkGA2nE40kzUD62cZJzjg6-O5pwQ2HL9GSp4oa8eWvAMA65H","width":4608},{"height":2448,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/111293368294840235230\">sohan varpa</a>"],"photo_reference":"ATtYBwLrnmFVRGs1HaJYtr-ENVRPkkbnhNXT5ue_NL91zY-uvRSTRMeA65Nd60sJvgfV1jbyJLwII5GWU3W1VDfhAiRGvrgFqrgRkBI-NNDIlR8s_bIE4VOovHg9ulGEs_-3b9qtYCnyO2DrTMsGOmF2UOY6KlhR0FLXcBWKuuUyZFGwuA1h","width":3264},{"height":1536,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/116140414200987626250\">Shirish Joshi</a>"],"photo_reference":"ATtYBwLaLst0uJd6N19Uw5Ci1TsDDBazFBZG6fvjfz2llhhFfbhRo-TvuYbvmdtliGnc5pLcvqZOE-nN7gMX1eAe_wxHKS1OhZkGA-JSny_ZIIMujYWg-Mh5eu1iwxMwgHmgFwnIlOv4xkdDkyf_dbQ-Qi3rUZOFDFFJVgp8CUOyQ8V2AtxQ","width":2048},{"height":3024,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/111324029970599331117\">Ashok Vaghela</a>"],"photo_reference":"ATtYBwLdCWKWEFmS5G2zp5GxnImepZK8BVoNKBfnOFQlWJjNxwHF601AusV-FAk94PijUeOn3hWT6KOrQwvIFYQiOPgEoKqvZEkwKFx8cSOM___5Al5uIQtBMP0F7e3SjvFLfl8op4afVDH_JlWSlKV1-X1ErTaBZJQaJAk_7lKGHNatvQfN","width":4032},{"height":3456,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/105911089213711326739\">Siddharth Saurabh</a>"],"photo_reference":"ATtYBwLvQen8zFLJcxwKeB7IaT2qKQHERIE7A3UDzmlgwSOlue-2IcFMTxk2tiuO80RzTnRXWlw1eCc-01TA1plBVdL03MJiZgmYlK3TKOdCVMnc01dJJCZwQF9HSz_Yy6vjrZtJe5JnvhhZzMQFqZQV6g4jIjz8O416yejYZkWqMx4HCnw1","width":4608}],"place_id":"ChIJIfj9KYzJWTkRKGuWqzn_cNg","plus_code":{"compound_code":"8Q5J+HW Rajkot, Gujarat, India","global_code":"7JJG8Q5J+HW"},"rating":4,"reference":"ChIJIfj9KYzJWTkRKGuWqzn_cNg","reviews":[{"author_name":"MoHIT Jahazy","author_url":"https://www.google.com/maps/contrib/102916788129674662528/reviews","language":"en","profile_photo_url":"https://lh3.googleusercontent.com/a-/AOh14GhQvcM8YvORHBpaj06TX6tKTpxNlFE3S9kGyusLFw=s128-c0x00000000-cc-rp-mo-ba6","rating":5,"relative_time_description":"a week ago","text":"Very minimalistic and simple airport.\n1. Checking in was very fast as this airport is not crowded.\n2. Small airport with good cleanliness and hygienic upkeep.\n3. Music was a bit loud which can be improved.\n4. Has a small cafeteria which serves coffee and stuff.\n5. Has souvenir shop as well.\nOverall a very good experience","time":1615692537},{"author_name":"Pawan Kumar Chohan","author_url":"https://www.google.com/maps/contrib/106763730645378318302/reviews","language":"en","profile_photo_url":"https://lh5.googleusercontent.com/-O_N9uEsizCU/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl9iRoGjqTFf0B_jHW9OyJbEsZYOw/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg","rating":3,"relative_time_description":"a month ago","text":"Some improvements needs to be done for security check in area and procedures. Queue management and distance maintaining is most important and needs to be improved.\nIts a small airport landing a few carriers like AIR INDIA and Spicejet. Therefore I understand its a trade off between services and demand.\nAnyway, I am happy to visit and fly from here.\nThanks","time":1612607157},{"author_name":"Abhee Sheth","author_url":"https://www.google.com/maps/contrib/113968713941264005967/reviews","language":"en","profile_photo_url":"https://lh3.googleusercontent.com/a-/AOh14Gi3JbbpsH9eZDBTigUpbGZqRk6R02t4xCZR5O1ciQ=s128-c0x00000000-cc-rp-mo-ba4","rating":3,"relative_time_description":"in the last week","text":"Airport seriously need some renovations and more counters and space also needed in boarding pass section.\nOverall it's good.\nGround crew of spicejet is really good and kind, I had in person queries for my revised flight and they helped very kindly.","time":1616061589},{"author_name":"Santosh Kumar Chopra","author_url":"https://www.google.com/maps/contrib/109506958069268203415/reviews","language":"en","profile_photo_url":"https://lh4.googleusercontent.com/-XrKW4q2ct1g/AAAAAAAAAAI/AAAAAAAAACU/AMZuuclJ5xYyhx5J63I3dE-QN7_w27xWiA/s128-c0x00000000-cc-rp-mo/photo.jpg","rating":5,"relative_time_description":"3 months ago","text":"It was my 1st time experience at Rajkot Airport. All facilities whatever required at Airport have been provided to me. Behavior and services of Airport Staff was very nice and exemplary. Please keep it up. Eager to visit again. Thanks a lot.","time":1606576227},{"author_name":"Saurabh Kushwaha","author_url":"https://www.google.com/maps/contrib/110089034083590778938/reviews","language":"en","profile_photo_url":"https://lh3.googleusercontent.com/a-/AOh14Ghud4Wusgh8qMkE22nzJVWTSVSqnffCdf-W3ZdjSA=s128-c0x00000000-cc-rp-mo","rating":5,"relative_time_description":"6 months ago","text":"Good he","time":1600008104}],"types":["airport","point_of_interest","establishment"],"url":"https://maps.google.com/?cid=15596246132741008168","user_ratings_total":1392,"utc_offset":330,"vicinity":"Gandhigram Civil Aerodrome"}
 /// status : "OK"
+library;
 
 class PlaceName {
   Result? _result;
@@ -113,27 +114,28 @@ class Result {
 
   String? get vicinity => _vicinity;
 
-  Result(
-      {List<AddressComponents>? addressComponents,
-      String? adrAddress,
-      String? businessStatus,
-      String? formattedAddress,
-      String? formattedPhoneNumber,
-      Geometry? geometry,
-      String? icon,
-      String? internationalPhoneNumber,
-      String? name,
-      List<Photos>? photos,
-      String? placeId,
-      PlusCode? plusCode,
-      dynamic rating,
-      String? reference,
-      List<Reviews>? reviews,
-      List<String>? types,
-      String? url,
-      int? userRatingsTotal,
-      int? utcOffset,
-      String? vicinity}) {
+  Result({
+    List<AddressComponents>? addressComponents,
+    String? adrAddress,
+    String? businessStatus,
+    String? formattedAddress,
+    String? formattedPhoneNumber,
+    Geometry? geometry,
+    String? icon,
+    String? internationalPhoneNumber,
+    String? name,
+    List<Photos>? photos,
+    String? placeId,
+    PlusCode? plusCode,
+    dynamic rating,
+    String? reference,
+    List<Reviews>? reviews,
+    List<String>? types,
+    String? url,
+    int? userRatingsTotal,
+    int? utcOffset,
+    String? vicinity,
+  }) {
     _addressComponents = addressComponents;
     _adrAddress = adrAddress;
     _businessStatus = businessStatus;
@@ -167,7 +169,8 @@ class Result {
     _businessStatus = json["business_status"];
     _formattedAddress = json["formatted_address"];
     _formattedPhoneNumber = json["formatted_phone_number"];
-    _geometry = json["geometry"] != null ? Geometry.fromJson(json["geometry"]) : null;
+    _geometry =
+        json["geometry"] != null ? Geometry.fromJson(json["geometry"]) : null;
     _icon = json["icon"];
     _internationalPhoneNumber = json["international_phone_number"];
     _name = json["name"];
@@ -178,7 +181,8 @@ class Result {
       });
     }
     _placeId = json["place_id"];
-    _plusCode = json["plus_code"] != null ? PlusCode.fromJson(json["plus_code"]) : null;
+    _plusCode =
+        json["plus_code"] != null ? PlusCode.fromJson(json["plus_code"]) : null;
     _rating = json["rating"];
     _reference = json["reference"];
     if (json["reviews"] != null) {
@@ -197,7 +201,8 @@ class Result {
   Map<String, dynamic> toJson() {
     var map = <String, dynamic>{};
     if (_addressComponents != null) {
-      map["address_components"] = _addressComponents!.map((v) => v.toJson()).toList();
+      map["address_components"] =
+          _addressComponents!.map((v) => v.toJson()).toList();
     }
     map["adr_address"] = _adrAddress;
     map["business_status"] = _businessStatus;
@@ -265,15 +270,16 @@ class Reviews {
 
   int? get time => _time;
 
-  Reviews(
-      {String? authorName,
-      String? authorUrl,
-      String? language,
-      String? profilePhotoUrl,
-      int? rating,
-      String? relativeTimeDescription,
-      String? text,
-      int? time}) {
+  Reviews({
+    String? authorName,
+    String? authorUrl,
+    String? language,
+    String? profilePhotoUrl,
+    int? rating,
+    String? relativeTimeDescription,
+    String? text,
+    int? time,
+  }) {
     _authorName = authorName;
     _authorUrl = authorUrl;
     _language = language;
@@ -357,7 +363,12 @@ class Photos {
 
   int? get width => _width;
 
-  Photos({int? height, List<String>? htmlAttributions, String? photoReference, int? width}) {
+  Photos({
+    int? height,
+    List<String>? htmlAttributions,
+    String? photoReference,
+    int? width,
+  }) {
     _height = height;
     _htmlAttributions = htmlAttributions;
     _photoReference = photoReference;
@@ -366,7 +377,10 @@ class Photos {
 
   Photos.fromJson(dynamic json) {
     _height = json["height"];
-    _htmlAttributions = json["html_attributions"] != null ? json["html_attributions"].cast<String>() : [];
+    _htmlAttributions =
+        json["html_attributions"] != null
+            ? json["html_attributions"].cast<String>()
+            : [];
     _photoReference = json["photo_reference"];
     _width = json["width"];
   }
@@ -398,8 +412,12 @@ class Geometry {
   }
 
   Geometry.fromJson(dynamic json) {
-    _location = json["location"] != null ? PlaceNameLocation.fromJson(json["location"]) : null;
-    _viewport = json["viewport"] != null ? Viewport.fromJson(json["viewport"]) : null;
+    _location =
+        json["location"] != null
+            ? PlaceNameLocation.fromJson(json["location"])
+            : null;
+    _viewport =
+        json["viewport"] != null ? Viewport.fromJson(json["viewport"]) : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -431,8 +449,14 @@ class Viewport {
   }
 
   Viewport.fromJson(dynamic json) {
-    _northeast = json["northeast"] != null ? Northeast.fromJson(json["northeast"]) : null;
-    _southwest = json["southwest"] != null ? Southwest.fromJson(json["southwest"]) : null;
+    _northeast =
+        json["northeast"] != null
+            ? Northeast.fromJson(json["northeast"])
+            : null;
+    _southwest =
+        json["southwest"] != null
+            ? Southwest.fromJson(json["southwest"])
+            : null;
   }
 
   Map<String, dynamic> toJson() {
@@ -549,7 +573,11 @@ class AddressComponents {
 
   List<String>? get types => _types;
 
-  AddressComponents({String? longName, String? shortName, List<String>? types}) {
+  AddressComponents({
+    String? longName,
+    String? shortName,
+    List<String>? types,
+  }) {
     _longName = longName;
     _shortName = shortName;
     _types = types;

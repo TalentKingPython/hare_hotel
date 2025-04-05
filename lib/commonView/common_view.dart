@@ -58,8 +58,8 @@ class CustomRoundedButton extends StatelessWidget {
     this.materialTapTargetSize = MaterialTapTargetSize.shrinkWrap,
     this.minHeight = 0.0,
     this.minWidth = 0.0,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

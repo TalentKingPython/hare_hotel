@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hare_hotel/screens/common/carRental/car_rental.dart';
 import 'package:hare_hotel/screens/common/restaurant/restaurant.dart';
 
 import '../../../utils/utils.dart';
@@ -172,9 +173,9 @@ class HomeScreenState extends State<HomeScreen>
         bottom: TabBar(
           controller: _tabController,
           isScrollable: false,
-          labelColor: colorRed,
+          labelColor: colorPrimary,
           unselectedLabelColor: colorHotelText,
-          indicatorColor: colorRed,
+          indicatorColor: colorPrimary,
           tabAlignment: TabAlignment.fill,
           tabs: [
             Tab(icon: Icon(Icons.space_dashboard_outlined), text: 'Overview'),
@@ -196,12 +197,7 @@ class HomeScreenState extends State<HomeScreen>
           Center(child: Overview()),
           Center(child: ThingsToDo()),
           Center(child: Restaurant()),
-          Center(
-            child: Text(
-              'Car Rental1',
-              style: TextStyle(fontSize: 14, color: colorTextCommonDark),
-            ),
-          ),
+          Center(child: CarRental()),
           Center(
             child: Text(
               'Cruise1',
