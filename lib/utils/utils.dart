@@ -49,6 +49,76 @@ getGeoCodingAddress(String keyword, String country) {
   return "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$keyword&components=country:${getCountryISOCodeFromName(country)}&types=address&key=";
 }
 
+String getRouteWithMultiStop(
+  String startLocation,
+  String destinationLocation,
+  List<LatLng> wayPoint,
+) {
+  String origin = "origin=$startLocation";
+  String waypoint = "";
+  String destination = "&destination=$destinationLocation";
+
+  String points = "";
+  if (wayPoint.isNotEmpty) {
+    for (var latLng in wayPoint) {
+      points = "$points|via:${latLng.latitude},${latLng.longitude}";
+    }
+    if (points.trim().isNotEmpty) {
+      waypoint = "&waypoints=optimize:true$points";
+    }
+  }
+  return "https://maps.googleapis.com/maps/api/directions/json?$origin$waypoint$destination&mode=DRIVING&language=en&key=";
+}
+
+Future<void> zoomToFit(
+  GoogleMapController? controller,
+  LatLngBounds bounds,
+  LatLng centerBounds,
+) async {
+  bool keepZoomingOut = true;
+  if (controller != null) {
+    final double zoomLevel = await controller.getZoomLevel() - 0.5;
+    while (keepZoomingOut) {
+      final LatLngBounds screenBounds = await controller.getVisibleRegion();
+      if (fits(bounds, screenBounds)) {
+        keepZoomingOut = false;
+        controller.moveCamera(
+          CameraUpdate.newCameraPosition(
+            CameraPosition(
+              target: centerBounds,
+              zoom: zoomLevel <= 10 ? defaultMapZoom - 0.5 : zoomLevel,
+            ),
+          ),
+        );
+        break;
+      } else {
+        controller.moveCamera(
+          CameraUpdate.newCameraPosition(
+            CameraPosition(target: centerBounds, zoom: zoomLevel),
+          ),
+        );
+      }
+    }
+  }
+}
+
+bool fits(LatLngBounds fitBounds, LatLngBounds screenBounds) {
+  final bool northEastLatitudeCheck =
+      screenBounds.northeast.latitude >= fitBounds.northeast.latitude;
+  final bool northEastLongitudeCheck =
+      screenBounds.northeast.longitude >= fitBounds.northeast.longitude;
+
+  final bool southWestLatitudeCheck =
+      screenBounds.southwest.latitude <= fitBounds.southwest.latitude;
+  final bool southWestLongitudeCheck =
+      screenBounds.southwest.longitude <= fitBounds.southwest.longitude;
+
+  return northEastLatitudeCheck &&
+      northEastLongitudeCheck &&
+      southWestLatitudeCheck &&
+      southWestLongitudeCheck;
+}
+
 String getAmountWithCurrency(dynamic amount) {
   String selectedCurrency = prefGetString(prefSelectedCurrency);
   if (selectedCurrency.isEmpty) {

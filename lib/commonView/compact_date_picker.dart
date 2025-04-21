@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import '../utils/utils.dart';
 
@@ -49,6 +50,7 @@ class CompactDatePickerState extends State<CompactDatePicker> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.01),
       width: deviceWidth * 0.2,
       height: deviceHeight * 0.05,
       decoration: BoxDecoration(
@@ -60,10 +62,10 @@ class CompactDatePickerState extends State<CompactDatePicker> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           InkWell(
-            child: Image.asset(
-              "assets/images/calendar-check.png",
-              width: deviceHeight * 0.05,
-              height: deviceHeight * 0.05,
+            child: SvgPicture.asset(
+              "assets/svgs/calendar-check.svg",
+              width: deviceHeight * 0.025,
+              height: deviceHeight * 0.025,
             ),
             onTap: () => _selectDate(context),
           ),

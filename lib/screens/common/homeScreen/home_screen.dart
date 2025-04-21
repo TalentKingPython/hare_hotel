@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hare_hotel/screens/common/carRental/car_rental.dart';
+import 'package:hare_hotel/screens/common/cruise/cruise.dart';
+import 'package:hare_hotel/screens/common/flight/flight.dart';
 import 'package:hare_hotel/screens/common/restaurant/restaurant.dart';
+import 'package:hare_hotel/screens/common/taxiScreen/taxi_screen.dart';
 
 import '../../../utils/utils.dart';
 import '../overview/overview.dart';
@@ -193,29 +196,15 @@ class HomeScreenState extends State<HomeScreen>
       ),
       body: TabBarView(
         controller: _tabController,
+        physics: NeverScrollableScrollPhysics(),
         children: [
           Center(child: Overview()),
           Center(child: ThingsToDo()),
           Center(child: Restaurant()),
           Center(child: CarRental()),
-          Center(
-            child: Text(
-              'Cruise1',
-              style: TextStyle(fontSize: 14, color: colorTextCommonDark),
-            ),
-          ),
-          Center(
-            child: Text(
-              'Taxi1',
-              style: TextStyle(fontSize: 14, color: colorTextCommonDark),
-            ),
-          ),
-          Center(
-            child: Text(
-              'Flight1',
-              style: TextStyle(fontSize: 14, color: colorTextCommonDark),
-            ),
-          ),
+          Center(child: Cruise()),
+          Center(child: TaxiScreen()),
+          Center(child: FlightScreen()),
         ],
       ),
     );

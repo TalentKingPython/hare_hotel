@@ -1,0 +1,407 @@
+{
+  "project_info": {
+    "project_number": "261783605700",
+    "firebase_url": "https://hare-89094-default-rtdb.firebaseio.com",
+    "project_id": "hare-89094",
+    "storage_bucket": "hare-89094.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261783605700:android:c8d68980df98986e6c5491",
+        "android_client_info": {
+          "package_name": "com.hare.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261783605700-0nmp0c4mqvvmt3h4id11hgcjgd8m7jf0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "1e960cdd2abfa93b4f2b4bc22eb9056c1d730aa8"
+          }
+        },
+        {
+          "client_id": "261783605700-3314j4q0jshe5t26dj9mc9it791b3rrg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "f4f135825c600dd8fc10fbbd5c45cd1808c42637"
+          }
+        },
+        {
+          "client_id": "261783605700-3cjk9dngvcqeigu2hirlpuh97p8plf61.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "262f6fea0c54d3277884c4dce926346f06700a58"
+          }
+        },
+        {
+          "client_id": "261783605700-3clnmt35qp3kbf3qvkpffd1712io0r2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "212f5d92132eac316b6888eb3c2498c8d91bbd35"
+          }
+        },
+        {
+          "client_id": "261783605700-4m0o5l5n2tc1gn11k20m1i6285uv13dq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "1eacecd66fcf2022b26a3a9314689304d5589a40"
+          }
+        },
+        {
+          "client_id": "261783605700-57mps3iq2rm8n2s190375oolcd4ipgb0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "772c13c2c3ef731248cdb56f13c23b6ccf5454e1"
+          }
+        },
+        {
+          "client_id": "261783605700-5osg86m36t5qq4vq43h71rf67t2h6gns.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "27c20cd70e4448cc2e83dab60afc9cd3cf6359d2"
+          }
+        },
+        {
+          "client_id": "261783605700-88c95lrig7ljnvc07jhv1c7n2dblfs0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "533a3ad7b636565f3b2dd6155b7cdc5dc386ab8c"
+          }
+        },
+        {
+          "client_id": "261783605700-a7grpnq5ur99bdg0qiam6v6euh642u8v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "e73bbe18f20e96beaf40255b7ed3416ef9435e6d"
+          }
+        },
+        {
+          "client_id": "261783605700-d1rmmia5rurmhvsisn6ha6usaub5j21n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "271c9ccb22ffefe2276d43f332d073695bd3dd69"
+          }
+        },
+        {
+          "client_id": "261783605700-j78orb0462mdhtvb84jl1qkmdaqqpsmc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "6c3acfd3147a2c0323f12664a52e2a5457804924"
+          }
+        },
+        {
+          "client_id": "261783605700-jgu7jg2ddh741hvg1thv266sqva2ul13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "175a65d954bec9d9fa647ac088ce2aaa9a056de4"
+          }
+        },
+        {
+          "client_id": "261783605700-nlvm1acov67j8pipn7np5bkb79r75gka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "23cb8cebf087dcfa073b8d0a0df024e57c480a87"
+          }
+        },
+        {
+          "client_id": "261783605700-rbdi77ga2155hsicbbj12fp1mp4aa06b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "9769c8caf5479fab807bd1676d17dd24499ebfb6"
+          }
+        },
+        {
+          "client_id": "261783605700-tt1poup5ln2r68lesf43ri46h6stvjl1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.customer",
+            "certificate_hash": "ba41cf552dfd13b30fbfd89ac7685daa3dcfbf3f"
+          }
+        },
+        {
+          "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_DlJOOaScC7zoeAx8vT5vXm8TrNqQ63c"
+        },
+        {
+          "current_key": "AIzaSyALS038X49mWeIC2cVcj-Ogg_L1wpPFTqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261783605700-1de7u9j7gufidf5t3ebf9hll8c0rp0bi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hare.driver"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261783605700:android:758012022b2d733a6c5491",
+        "android_client_info": {
+          "package_name": "com.hare.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261783605700-1gl0dlq7oqm7q0tmf7dg01nurm1ahg9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.driver",
+            "certificate_hash": "6a03ba97919bf0d86cbdee84aae303401a39fbd5"
+          }
+        },
+        {
+          "client_id": "261783605700-8igk6k6oe9jcrh9cr2fouolfk953g07q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.driver",
+            "certificate_hash": "271c9ccb22ffefe2276d43f332d073695bd3dd69"
+          }
+        },
+        {
+          "client_id": "261783605700-fqhp7dv5h113afg5ugjupsol1cdfupcf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.driver",
+            "certificate_hash": "e73bbe18f20e96beaf40255b7ed3416ef9435e6d"
+          }
+        },
+        {
+          "client_id": "261783605700-l6co438oeje0331pul9966mg39i6m9bj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.driver",
+            "certificate_hash": "d2ac13794685ac01fdf0a224b44693c0984cafec"
+          }
+        },
+        {
+          "client_id": "261783605700-mltnmctds9vgci8tcaegi2gh2ukg39c4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.driver",
+            "certificate_hash": "175a65d954bec9d9fa647ac088ce2aaa9a056de4"
+          }
+        },
+        {
+          "client_id": "261783605700-r96lfop0hlv11q4go7o312u8u5k6ljq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.driver",
+            "certificate_hash": "212f5d92132eac316b6888eb3c2498c8d91bbd35"
+          }
+        },
+        {
+          "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_DlJOOaScC7zoeAx8vT5vXm8TrNqQ63c"
+        },
+        {
+          "current_key": "AIzaSyALS038X49mWeIC2cVcj-Ogg_L1wpPFTqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261783605700-1de7u9j7gufidf5t3ebf9hll8c0rp0bi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hare.driver"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261783605700:android:4a14a31f4317a69e6c5491",
+        "android_client_info": {
+          "package_name": "com.hare.hotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_DlJOOaScC7zoeAx8vT5vXm8TrNqQ63c"
+        },
+        {
+          "current_key": "AIzaSyALS038X49mWeIC2cVcj-Ogg_L1wpPFTqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261783605700-1de7u9j7gufidf5t3ebf9hll8c0rp0bi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hare.driver"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261783605700:android:60c1af8cfd7936466c5491",
+        "android_client_info": {
+          "package_name": "com.hare.store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261783605700-0nmde623fth7o9970scv22du7kg5gobs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "212f5d92132eac316b6888eb3c2498c8d91bbd35"
+          }
+        },
+        {
+          "client_id": "261783605700-5aeg5k11e6jt927db1rd667e0nc5i2gb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "23cb8cebf087dcfa073b8d0a0df024e57c480a87"
+          }
+        },
+        {
+          "client_id": "261783605700-bjqpfip897jhovpdj5kks7q6i265gbui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "d2ac13794685ac01fdf0a224b44693c0984cafec"
+          }
+        },
+        {
+          "client_id": "261783605700-d02nb1913gkoa1njirq5pfc64rocouss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "533a3ad7b636565f3b2dd6155b7cdc5dc386ab8c"
+          }
+        },
+        {
+          "client_id": "261783605700-do1vcnnnsf3b0hqa9acavjk095dul3qo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "a4b34ffc9605c8a905ed140d459f6ac6b48cf03e"
+          }
+        },
+        {
+          "client_id": "261783605700-ejpkjjv1uct0lgvms1n5gsf99qffno3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "ade4ac8c38d915d7955ddc953caeb0ae978551b2"
+          }
+        },
+        {
+          "client_id": "261783605700-gve3b7lgqds2efssffe7n8e6qnhln0qo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "e73bbe18f20e96beaf40255b7ed3416ef9435e6d"
+          }
+        },
+        {
+          "client_id": "261783605700-rd1cpr5vn9q0sageibtiin36m1e0sfsd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "262f6fea0c54d3277884c4dce926346f06700a58"
+          }
+        },
+        {
+          "client_id": "261783605700-tkv4c9iokth1mvhhhklgbugaupbkksqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hare.store",
+            "certificate_hash": "175a65d954bec9d9fa647ac088ce2aaa9a056de4"
+          }
+        },
+        {
+          "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_DlJOOaScC7zoeAx8vT5vXm8TrNqQ63c"
+        },
+        {
+          "current_key": "AIzaSyALS038X49mWeIC2cVcj-Ogg_L1wpPFTqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261783605700-uhib6st3sm5eic02mce2hbvfsdoccj69.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "261783605700-1de7u9j7gufidf5t3ebf9hll8c0rp0bi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hare.driver"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -406,7 +406,7 @@ class RestaurantState extends State<Restaurant> {
                       ),
                       child: Row(
                         children: [
-                          SvgPicture.asset('assets/svgs/question_mark.svg'),
+                          SvgPicture.asset('assets/svgs/question-mark.svg'),
                           SizedBox(width: deviceWidth * 0.01),
                           Text(
                             'Looking to expand your search outside of Bergen? We have suggestions.',
@@ -498,10 +498,8 @@ class RestaurantState extends State<Restaurant> {
       padding: EdgeInsets.only(bottom: deviceHeight * 0.01),
       child: Row(
         children: [
-          Icon(
-            checked ? Icons.check_circle : Icons.circle_outlined,
-            color: checked ? colorPrimary : colorButtonBorder,
-            size: 17,
+          SvgPicture.asset(
+            checked ? 'assets/svgs/checked.svg' : 'assets/svgs/unchecked.svg',
           ),
           SizedBox(width: 10),
           Text(text, style: TextStyle(fontSize: deviceWidth * 0.012)),

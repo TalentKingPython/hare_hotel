@@ -38,14 +38,23 @@ class GoogleApiRepo {
     return response;
   }
 
-  // directionsApiCall(
-  //     String origin, String destination, List<LatLng> wayPoints) async {
-  //   final response = await _apiBaseHelper
-  //       .post(ApiConst.endPointGoogleMap, body: {
-  //     ApiParam.paramUrl: getRouteWithMultiStop(origin, destination, wayPoints)
-  //   });
-  //   return response;
-  // }
+  directionsApiCall(
+    String origin,
+    String destination,
+    List<LatLng> wayPoints,
+  ) async {
+    final response = await _apiBaseHelper.post(
+      ApiConst.endPointGoogleMap,
+      body: {
+        ApiParam.paramUrl: getRouteWithMultiStop(
+          origin,
+          destination,
+          wayPoints,
+        ),
+      },
+    );
+    return response;
+  }
 
   geoCodingApiCall(double latitude, double longitude) async {
     final response = await _apiBaseHelper.post(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../commonView/customCountryCodePicker/country_code.dart';
 
@@ -10,6 +11,14 @@ final CountryCode defaultCountryCode = CountryCode(
   name: "Norge",
   code: "NO",
   dialCode: "+47",
+);
+
+// const defaultLatLng = LatLng(0, 0);
+const defaultLatLng = LatLng(60.3913, 5.3221);
+
+const initCameraPosition = CameraPosition(
+  target: defaultLatLng,
+  zoom: defaultMapZoom,
 );
 
 const String defaultCurrency = "NOK";

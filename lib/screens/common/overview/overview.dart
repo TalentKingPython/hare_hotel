@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hare_hotel/commonView/button_category.dart';
+import 'package:hare_hotel/screens/common/overview/overview_dl.dart';
 
 import '../../../utils/utils.dart';
 
@@ -11,6 +13,51 @@ class Overview extends StatefulWidget {
 }
 
 class OverviewState extends State<Overview> {
+  int selectedCategory = 0;
+
+  List<ButtonCategoryPojo> buttonCategoryList = [
+    ButtonCategoryPojo(
+      categoryId: 0,
+      svgPath: 'assets/svgs/star-border.svg',
+      categoryName: 'Essentials',
+    ),
+    ButtonCategoryPojo(
+      categoryId: 1,
+      svgPath: 'assets/svgs/traveler-choice.svg',
+      categoryName: 'Travelers\' Choice',
+    ),
+    ButtonCategoryPojo(
+      categoryId: 2,
+      svgPath: 'assets/svgs/family.svg',
+      categoryName: 'Family friendly',
+    ),
+    ButtonCategoryPojo(
+      categoryId: 3,
+      svgPath: 'assets/svgs/gem.svg',
+      categoryName: 'Hidden gems',
+    ),
+    ButtonCategoryPojo(
+      categoryId: 4,
+      svgPath: 'assets/svgs/museum.svg',
+      categoryName: 'Museums',
+    ),
+    ButtonCategoryPojo(
+      categoryId: 5,
+      svgPath: 'assets/svgs/outdoor.svg',
+      categoryName: 'Outdoors',
+    ),
+    ButtonCategoryPojo(
+      categoryId: 6,
+      svgPath: 'assets/svgs/art.svg',
+      categoryName: 'Arts & theater',
+    ),
+    ButtonCategoryPojo(
+      categoryId: 7,
+      svgPath: 'assets/svgs/nightlife.svg',
+      categoryName: 'Nightlife',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -554,7 +601,7 @@ class OverviewState extends State<Overview> {
                             ),
                             SizedBox(height: deviceHeight * 0.015),
                             Text(
-                              "Pick a category to filter your necs",
+                              "Pick a category to filter your recs",
                               style: TextStyle(
                                 color: colorHotelText,
                                 fontSize: deviceWidth * 0.014,
@@ -596,262 +643,26 @@ class OverviewState extends State<Overview> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: deviceHeight * 0.06,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: deviceWidth * 0.01,
-                                vertical: deviceHeight * 0.01,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colorRed,
-                                borderRadius: BorderRadius.circular(
-                                  deviceWidth * 0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.star_border,
-                                    color: colorWhite,
-                                    size: deviceWidth * 0.016,
-                                  ),
-                                  SizedBox(width: deviceWidth * 0.005),
-                                  Text(
-                                    "Essentials",
-                                    style: TextStyle(
-                                      color: colorWhite,
-                                      fontSize: deviceWidth * 0.014,
+                          spacing: deviceWidth * 0.006,
+                          children:
+                              buttonCategoryList
+                                  .map(
+                                    (element) => GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          selectedCategory = element.categoryId;
+                                        });
+                                      },
+                                      child: ButtonCategory(
+                                        element.svgPath,
+                                        element.categoryName,
+                                        selected:
+                                            selectedCategory ==
+                                            element.categoryId,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(width: deviceWidth * 0.006),
-                            Container(
-                              height: deviceHeight * 0.06,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: deviceWidth * 0.01,
-                                vertical: deviceHeight * 0.01,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colorWhite,
-                                border: Border.all(
-                                  color: colorButtonBorder,
-                                  width: 0.5,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  deviceWidth * 0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.list,
-                                    color: colorBlack,
-                                    size: deviceWidth * 0.016,
-                                  ),
-                                  SizedBox(width: deviceWidth * 0.005),
-                                  Text(
-                                    "Travelor's choice",
-                                    style: TextStyle(
-                                      color: colorBlack,
-                                      fontSize: deviceWidth * 0.014,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(width: deviceWidth * 0.006),
-                            Container(
-                              height: deviceHeight * 0.06,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: deviceWidth * 0.01,
-                                vertical: deviceHeight * 0.01,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colorWhite,
-                                border: Border.all(
-                                  color: colorButtonBorder,
-                                  width: 0.5,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  deviceWidth * 0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.list,
-                                    color: colorBlack,
-                                    size: deviceWidth * 0.016,
-                                  ),
-                                  SizedBox(width: deviceWidth * 0.005),
-                                  Text(
-                                    "Travelor's choice",
-                                    style: TextStyle(
-                                      color: colorBlack,
-                                      fontSize: deviceWidth * 0.014,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(width: deviceWidth * 0.006),
-                            Container(
-                              height: deviceHeight * 0.06,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: deviceWidth * 0.01,
-                                vertical: deviceHeight * 0.01,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colorWhite,
-                                border: Border.all(
-                                  color: colorButtonBorder,
-                                  width: 0.5,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  deviceWidth * 0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.list,
-                                    color: colorBlack,
-                                    size: deviceWidth * 0.016,
-                                  ),
-                                  SizedBox(width: deviceWidth * 0.005),
-                                  Text(
-                                    "Travelor's choice",
-                                    style: TextStyle(
-                                      color: colorBlack,
-                                      fontSize: deviceWidth * 0.014,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(width: deviceWidth * 0.006),
-                            Container(
-                              height: deviceHeight * 0.06,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: deviceWidth * 0.01,
-                                vertical: deviceHeight * 0.01,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colorWhite,
-                                border: Border.all(
-                                  color: colorButtonBorder,
-                                  width: 0.5,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  deviceWidth * 0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.list,
-                                    color: colorBlack,
-                                    size: deviceWidth * 0.016,
-                                  ),
-                                  SizedBox(width: deviceWidth * 0.005),
-                                  Text(
-                                    "Travelor's choice",
-                                    style: TextStyle(
-                                      color: colorBlack,
-                                      fontSize: deviceWidth * 0.014,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(width: deviceWidth * 0.006),
-                            Container(
-                              height: deviceHeight * 0.06,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: deviceWidth * 0.01,
-                                vertical: deviceHeight * 0.01,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colorWhite,
-                                border: Border.all(
-                                  color: colorButtonBorder,
-                                  width: 0.5,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  deviceWidth * 0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.list,
-                                    color: colorBlack,
-                                    size: deviceWidth * 0.016,
-                                  ),
-                                  SizedBox(width: deviceWidth * 0.005),
-                                  Text(
-                                    "Travelor's choice",
-                                    style: TextStyle(
-                                      color: colorBlack,
-                                      fontSize: deviceWidth * 0.014,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(width: deviceWidth * 0.006),
-                            Container(
-                              height: deviceHeight * 0.06,
-                              padding: EdgeInsets.symmetric(
-                                horizontal: deviceWidth * 0.01,
-                                vertical: deviceHeight * 0.01,
-                              ),
-                              decoration: BoxDecoration(
-                                color: colorWhite,
-                                border: Border.all(
-                                  color: colorButtonBorder,
-                                  width: 0.5,
-                                ),
-                                borderRadius: BorderRadius.circular(
-                                  deviceWidth * 0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.list,
-                                    color: colorBlack,
-                                    size: deviceWidth * 0.016,
-                                  ),
-                                  SizedBox(width: deviceWidth * 0.005),
-                                  Text(
-                                    "Travelor's choice",
-                                    style: TextStyle(
-                                      color: colorBlack,
-                                      fontSize: deviceWidth * 0.014,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                                  )
+                                  .toList(),
                         ),
                       ),
                     ),
@@ -2341,6 +2152,7 @@ class OverviewState extends State<Overview> {
                     "assets/svgs/experience-reserve.svg",
                     width: deviceWidth * 0.016,
                     height: deviceWidth * 0.016,
+                    color: colorWhite,
                   ),
                   SizedBox(width: deviceWidth * 0.01),
                   Text(
@@ -2364,7 +2176,7 @@ class OverviewState extends State<Overview> {
       width: deviceWidth * 0.28,
       height: deviceHeight * 0.8,
       decoration: BoxDecoration(
-        color: colorRed.withAlpha(10),
+        color: colorRed.withAlpha(25),
         borderRadius: BorderRadius.circular(deviceWidth * 0.02),
       ),
       child: Column(
@@ -2414,16 +2226,6 @@ class OverviewState extends State<Overview> {
                     ),
                   ),
                 ),
-                SizedBox(height: deviceHeight * 0.02),
-                Text(
-                  "Lorem ipsum dolor sit amet, consectetur ipsum",
-                  style: TextStyle(
-                    color: colorBlack,
-                    fontSize: deviceWidth * 0.018,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: deviceHeight * 0.01),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -2454,7 +2256,7 @@ class OverviewState extends State<Overview> {
                       size: deviceWidth * 0.02,
                       fill: 0.1,
                     ),
-                    SizedBox(width: deviceWidth * 0.015),
+                    SizedBox(width: deviceWidth * 0.005),
                     Text(
                       "4.8",
                       style: TextStyle(
@@ -2463,18 +2265,32 @@ class OverviewState extends State<Overview> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(width: deviceWidth * 0.01),
+                    SizedBox(width: deviceWidth * 0.005),
                     Text(
                       "(278 Reviews)",
                       style: TextStyle(
                         color: colorHotelText,
-                        fontSize: deviceWidth * 0.016,
-                        fontWeight: FontWeight.bold,
+                        fontSize: deviceWidth * 0.015,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: deviceHeight * 0.02),
+                Text(
+                  "Lorem ipsum dolor sit amet, consectetur ipsum",
+                  style: TextStyle(
+                    color: colorBlack,
+                    fontSize: deviceWidth * 0.018,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "These Rankings are informed by Hare data - we consider traveler reviews & ratings",
+                  style: TextStyle(
+                    color: colorHotelText,
+                    fontSize: deviceWidth * 0.012,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
