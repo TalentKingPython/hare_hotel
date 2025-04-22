@@ -9,10 +9,9 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../../blocs/bloc.dart';
 import '../../../utils/utils.dart';
-import '../../../utils/get_route_utils.dart';
 
-class TaxiScreenBloc extends Bloc {
-  String tag = "TaxiScreenBloc>>>";
+class ItineraryBloc extends Bloc {
+  String tag = "ItineraryBloc>>>";
   BuildContext context;
   GoogleMapController? googleMapController;
   CameraUpdate? cameraUpdate;
@@ -23,7 +22,7 @@ class TaxiScreenBloc extends Bloc {
 
   State<StatefulWidget> state;
 
-  TaxiScreenBloc(this.context, this.state) {
+  ItineraryBloc(this.context, this.state) {
     addMarker();
   }
 
@@ -66,13 +65,13 @@ class TaxiScreenBloc extends Bloc {
   addMarker() async {
     String pickupLatLong = "60.39299, 5.32415";
     String destinationLatLong = "60.38799, 5.33015";
-    await GetRoutesUtils().getRoutes(pickupLatLong, destinationLatLong, [], (
-      polyLines,
-      duration,
-      distance,
-    ) async {
-      changePolyLineList(polyLines);
-    });
+    // await GetRoutesUtils().getRoutes(pickupLatLong, destinationLatLong, [], (
+    //   polyLines,
+    //   duration,
+    //   distance,
+    // ) async {
+    //   changePolyLineList(polyLines);
+    // });
     BitmapDescriptor pickUpMarkerIcon = await getBitmapDescriptorFromAssetBytes(
       'assets/images/src-marker.png',
       (deviceAverageSize * 0.1).toInt(),

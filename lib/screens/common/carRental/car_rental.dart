@@ -334,7 +334,7 @@ class CarRentalState extends State<CarRental> {
                     ),
                     Expanded(
                       child: serviceCard(
-                        SvgPicture.asset('assets/svgs/wallet.svg'),
+                        SvgPicture.asset('assets/svgs/wallet-red.svg'),
                         'Book With Confidence',
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
                       ),

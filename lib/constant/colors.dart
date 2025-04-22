@@ -49,7 +49,7 @@ const Color colorPickUp = Color(0xff2FC494);
 const Color lightStepUnProgress = Color(0xffc6c6c6);
 const Color colorIconLight = Color(0xffc6c6c6);
 const Color colorHistoryCompleteDark = Color(0xffE8F8F0);
-const Color colorButtonBorder = Color(0xfff0F0F0);
+const Color colorButtonBorder = Color(0xFFF0F0F0);
 const Color colorHotelText = Color(0xff9c9c9c);
 
 //Status Color

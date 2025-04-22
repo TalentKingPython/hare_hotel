@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hare_hotel/commonView/compact_date_picker.dart';
-import 'package:hare_hotel/constant/colors.dart';
+import 'package:hare_hotel/screens/common/itinerary/itinerary.dart';
+import 'package:hare_hotel/screens/common/reservation/reservation.dart';
 import 'package:hare_hotel/utils/utils.dart';
 
 class AttractionReview extends StatefulWidget {
@@ -712,7 +712,9 @@ class AttractionReviewState extends State<AttractionReview> {
                                 ),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              openScreenWithResult(context, Reservation());
+                            },
                             child: Text(
                               'Reserve Now',
                               style: TextStyle(fontSize: deviceWidth * 0.012),
@@ -1043,7 +1045,10 @@ class AttractionReviewState extends State<AttractionReview> {
                   children: [
                     Text(
                       'From ',
-                      style: TextStyle(fontSize: deviceWidth * 0.016),
+                      style: TextStyle(
+                        fontSize: deviceWidth * 0.016,
+                        color: colorBlack,
+                      ),
                     ),
                     Text(
                       '\$94 USD',
@@ -1063,6 +1068,7 @@ class AttractionReviewState extends State<AttractionReview> {
                     ),
                   ],
                 ),
+                SizedBox(height: deviceHeight * 0.02),
               ],
             ),
           ),

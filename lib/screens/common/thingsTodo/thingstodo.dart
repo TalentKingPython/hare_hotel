@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hare_hotel/screens/common/attractionDetail/attraction_detail.dart';
 import 'package:hare_hotel/screens/common/attractionReview/attraction_review.dart';
 
 import '../../../utils/utils.dart';
@@ -111,20 +112,22 @@ class ThingsToDoState extends State<ThingsToDo> {
   }
 
   Widget _attractionCard() {
-    return GestureDetector(
-      onTap: () => openScreenWithResult(context, AttractionReview()),
-      child: Container(
-        width: deviceWidth * 0.28,
-        height: deviceHeight * 0.8,
-        decoration: BoxDecoration(
-          color: colorRed.withAlpha(25),
-          borderRadius: BorderRadius.circular(deviceWidth * 0.02),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
+    return Container(
+      width: deviceWidth * 0.28,
+      height: deviceHeight * 0.8,
+      decoration: BoxDecoration(
+        color: colorRed.withAlpha(25),
+        borderRadius: BorderRadius.circular(deviceWidth * 0.02),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          GestureDetector(
+            onTap: () {
+              openScreenWithResult(context, AttractionDetail());
+            },
+            child: SizedBox(
               width: deviceWidth * 0.28,
               height: deviceHeight * 0.06,
               child: Center(
@@ -138,7 +141,10 @@ class ThingsToDoState extends State<ThingsToDo> {
                 ),
               ),
             ),
-            Container(
+          ),
+          GestureDetector(
+            onTap: () => openScreenWithResult(context, AttractionReview()),
+            child: Container(
               width: deviceWidth * 0.28,
               height: deviceHeight * 0.74,
               padding: EdgeInsets.symmetric(
@@ -292,8 +298,8 @@ class ThingsToDoState extends State<ThingsToDo> {
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

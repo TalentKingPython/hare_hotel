@@ -209,7 +209,7 @@ class CruiseState extends State<Cruise> {
                     ),
                     Expanded(
                       child: serviceCard(
-                        SvgPicture.asset('assets/svgs/wallet.svg'),
+                        SvgPicture.asset('assets/svgs/wallet-red.svg'),
                         'The Lowest Cruise Price',
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
                       ),
