@@ -56,6 +56,7 @@ dependencies:
   shared_preferences: any
   device_preview: ^1.2.0
   flutter_svg: ^2.0.17
+  dotted_line: ^3.2.3
 
 dev_dependencies:
   flutter_test:
@@ -114,17 +115,52 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: Omnes
+      fonts:
+        - asset: assets/fonts/Omnes-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Omnes-Black-Italic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/Omnes-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Omnes-Bold-Italic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Omnes-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Omnes-ExtraLight-Italic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/Omnes-Hairline.ttf
+          weight: 100
+        - asset: assets/fonts/Omnes-Hairline-Italic.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/Omnes-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Omnes-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Omnes-Light-Italic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Omnes-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Omnes-Medium-Italic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Omnes-Regular.ttf
+        - asset: assets/fonts/Omnes-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Omnes-SemiBold-Italic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/Omnes-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Omnes-Thin-Italic.ttf
+          weight: 100
+          style: italic
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
